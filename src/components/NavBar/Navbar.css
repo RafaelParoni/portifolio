@@ -1,0 +1,124 @@
+:root {
+    --text-color: #000;
+    --shadow-color: #000;
+    --backgroundMobile-color: rgba(0,0, 0, 0.5);
+    --navbarMobileText-color: #fff;
+}
+.dark-mode:root {
+    --text-color: #fff;
+    --shadow-color: #fff;
+    --backgroundMobile-color: rgba(277,277, 277, 0.5);
+    --navbarMobileText-color: #000;
+}
+.light-mode:root {
+    --text-color: #000;
+    --backgroundMobile-color: rgba(0,0, 0, 0.5);
+    --shadow-color: #000;
+    --navbarMobileText-color: #fff;
+}
+
+
+.Navbar {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    box-shadow: 1px 1px 10px 2px var(--shadow-color);
+}
+.NavbarHref{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    grid-gap: 20px;
+    align-items: center;
+    padding-right: 70px;
+}
+.NavbarHref button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.NavbarHref button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+#DarkMode {
+    display: none;
+}
+#DarkModeMobile {
+    display: none;
+}
+.NavbarLogo {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 25px;
+    grid-gap: 10px;
+}
+.NavbarLogo img {
+    height: 35px;
+    border-radius: 50%;
+}
+.NavbarLogo a {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.Mobile{
+    display: none;
+}
+.MobileNavbarHref {
+    display: none;
+}
+.ScreenMobileNavbar {
+    display: none;
+
+}
+#NavbarMobileClose {
+    display: none;
+}
+
+
+@media screen  and (max-width: 640px) { 
+
+    .NavbarLogo {
+        padding-left: 10px;
+        width: 100vw;
+    }
+    .NavbarHref {
+        display: none;
+    }
+    .Mobile {
+        display: flex;
+        padding-right: 5px;
+    }
+    .ScreenMobileNavbar {
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        top: 50px;
+        right: 0;
+        background-color: var(--backgroundMobile-color);
+        width: 50vw;
+        height: 30vh;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .BtnMobileNavbar :nth-child(1) { 
+        color: var(--navbarMobileText-color);
+    }
+
+
+    
+
+}

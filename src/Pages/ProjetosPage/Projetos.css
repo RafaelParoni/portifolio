@@ -1,0 +1,160 @@
+:root {
+    --text-color: #000;
+    --shadow-color: #000;
+    --BackgroundInfo: rgba(163, 163, 163, 0.6);
+    --backgroundProjectDiv: rgba(223, 223, 223, 0.9);
+}
+.dark-mode:root {
+    --text-color: #fff;
+    --shadow-color: #fff;
+    --BackgroundInfo: rgba(80, 80, 80, 0.6);
+    --backgroundProjectDiv: rgba(20, 20, 20, 0.9);
+}
+.light-mode:root {
+    --text-color: #000;
+    --shadow-color: #000;
+    --BackgroundInfo: rgba(163, 163, 163, 0.6);
+    --backgroundProjectDiv: rgba(223, 223, 223, 0.9);
+}
+
+.ProjetoListPage {
+    width: 100vw;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fancy {
+    color: var(--text-color);
+    position: relative;
+    white-space: nowrap;
+    &:after {
+      --deco-height: 0.3125em;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(var(--deco-height) * -0.625);
+      height: var(--deco-height);
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23000' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: auto 100%;
+      background-repeat: round;
+      background-position: 0em;
+    }
+}
+
+.ListProjeto{
+    background-color: var(--BackgroundInfo);
+    width: min(1000px, 80vw);
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    border-radius: 15px;
+}
+.ListProjeto p {
+    margin: 0;
+    color:  var(--text-color);
+}
+.ListProjeto div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.projetoDiv {
+    width: min(300px, 70vw);
+    height: auto;
+    background-color: var(--backgroundProjectDiv);
+    color: var(--text-color);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: 0;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.projetoDiv:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px 1px var(--shadow-color);
+}
+.projetoDiv p:nth-last-child(2){
+    font-size: 17px;
+}
+.projetoDiv p:nth-last-child(1){
+    font-size: 15px;
+}
+.bottomText a {
+    text-decoration: none;
+    color: #00FDCF;
+}
+
+.SearchProjetoPage {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    color: var(--text-color);
+}
+.SearchProjeto {
+    background-color: var(--backgroundProjectDiv);
+    width: min(900px, 80vw);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.languageSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+.languageSearchDiv {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 15px;
+}
+.SearchTitle {
+    text-align: center;
+}
+.SearchTitle h1 a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+.SearchSubTitle {
+    text-align: center;
+    display: flex;
+}
+.SearchSubTitle a {
+    text-decoration: none;
+    color: #00FDCF;
+    display: inline-block;
+}
+.SearchImg {
+    width: 100%;
+    height: auto;
+}
+.SearchImg img {
+    width: 100%;
+    height: auto
+}
