@@ -28,20 +28,23 @@ function NavBar(){
         var lightModeBtn = document.getElementById('LightMode')
         var DarkModeBtnMobile = document.getElementById('DarkModeMobile')
         var lightModeBtnMobile = document.getElementById('LightModeMobile')
+        var htmlBody = document.getElementById('html')
         if(Tema === 'Light'){
+            htmlBody.removeAttribute('class')
+            htmlBody.setAttribute('class', 'dark-mode')
             DarkModeBtn.style.display = 'flex'
             lightModeBtn.style.display = 'none'
             DarkModeBtnMobile.style.display = 'flex'
             lightModeBtnMobile.style.display = 'none'
             window.localStorage.setItem('Tema', 'Dark')
-            window.location.reload()
         }else {
+            htmlBody.removeAttribute('class')
+            htmlBody.setAttribute('class', 'dark-light')
             DarkModeBtn.style.display = 'none'
             DarkModeBtnMobile.style.display = 'none'
             lightModeBtn.style.display = 'flex'
             lightModeBtnMobile.style.display = 'flex'
             window.localStorage.setItem('Tema', 'Light')
-            window.location.reload()
         }
         
     }
