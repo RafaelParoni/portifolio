@@ -125,6 +125,9 @@
     justify-content: center;
     align-items: center;
     color: var(--text-color);
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 .languageSearchDiv {
     padding: 15px;
@@ -156,5 +159,8 @@
 }
 .SearchImg img {
     width: 100%;
-    height: auto
+    height: auto;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }

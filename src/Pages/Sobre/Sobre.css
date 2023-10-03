@@ -107,6 +107,9 @@
 }
 .languagesHabi img {
     width: 70px;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 
 }
 .SocialHabi {

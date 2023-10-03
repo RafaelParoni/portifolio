@@ -28,6 +28,9 @@
     -ms-user-select: none; 
     user-select: none; 
     box-shadow: 1px 1px 10px 2px var(--shadow-color);
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 .NavbarHref{
     width: 50vw;
