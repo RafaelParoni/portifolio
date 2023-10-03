@@ -45,7 +45,7 @@ function Contato(){
                 <button onClick={()=> ContatoLink('https://twitter.com/RafaelParoni')}  className="SocialHabi"><RiTwitterLine/></button>
                 <button  onClick={()=> ContatoLink('discord')}  className="SocialHabi"><RiDiscordLine/></button><span id="discord">Nome de usuario copiado!</span>
                 <button onClick={()=> ContatoLink('https://www.youtube.com/channel/UCCjwv7_RJteoSRhbRqFqP-Q')}  className="SocialHabi"><RiYoutubeLine/></button>
-                <button  onClick={()=> ContatoLink('https://rafaelparoni.netlify.app/')} className="SocialHabi"><RiChromeLine/></button>
+                <button  onClick={()=> ContatoLink('https://rafaelparoni.vercel.app/')} className="SocialHabi"><RiChromeLine/></button>
             </div>
         </div>
     )
