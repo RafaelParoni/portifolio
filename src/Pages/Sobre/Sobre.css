@@ -57,6 +57,11 @@
 }
 .SobreInformation img {
     width: 150px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 60%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 35%;
+    
 }
 .HabPageSobre {
     background-color: green;

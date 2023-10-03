@@ -9,10 +9,6 @@ import NavBar from './components/NavBar/Navbar';
 import SearchProjeto from './Pages/ProjetosPage/Search/Search';
 import ProjetosPage from './Pages/ProjetosPage/Projetos.js'; 
  
-/* 
-console.log(window.localStorage.setItem('Tema', 'Light'))
-console.log(window.localStorage.getItem('Tema'))
-*/
 var Tema = window.localStorage.getItem('Tema')
 
 if(Tema === null){
