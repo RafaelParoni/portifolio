@@ -24,7 +24,6 @@ async function DedetectMode(){
   var lightModeBtnMobile = document.getElementById('LightModeMobile')
   var htmlBody = document.getElementById('html')
     if(Tema === 'dark'){
-        htmlBody.removeAttribute('class')
         htmlBody.setAttribute('class', 'dark-mode')
         DarkModeBtn.style.display = 'flex'
         lightModeBtn.style.display = 'none'
@@ -33,7 +32,6 @@ async function DedetectMode(){
         window.localStorage.setItem('Tema', 'dark')
         console.log(Tema)
   }else{
-        htmlBody.removeAttribute('class')
         htmlBody.setAttribute('class', 'light-mode')
         DarkModeBtn.style.display = 'none'
         DarkModeBtnMobile.style.display = 'none'
