@@ -12,7 +12,7 @@ import ProjetosPage from './Pages/ProjetosPage/Projetos.js';
 var Tema = window.localStorage.getItem('Tema')
 
 if(Tema === null){
-  window.localStorage.setItem('Tema', 'Light')
+  window.localStorage.setItem('Tema', 'light')
 }else{
   console.log('Temos um tema ativo!')
 }
@@ -23,14 +23,14 @@ async function DedetectMode(){
   var DarkModeBtnMobile = document.getElementById('DarkModeMobile')
   var lightModeBtnMobile = document.getElementById('LightModeMobile')
   var htmlBody = document.getElementById('html')
-    if(Tema === 'Dark'){
+    if(Tema === 'dark'){
         htmlBody.removeAttribute('class')
         htmlBody.setAttribute('class', 'dark-mode')
         DarkModeBtn.style.display = 'flex'
         lightModeBtn.style.display = 'none'
         DarkModeBtnMobile.style.display = 'flex'
         lightModeBtnMobile.style.display = 'none'
-        window.localStorage.setItem('Tema', 'Dark')
+        window.localStorage.setItem('Tema', 'dark')
         console.log(Tema)
   }else{
         htmlBody.removeAttribute('class')
@@ -39,7 +39,7 @@ async function DedetectMode(){
         DarkModeBtnMobile.style.display = 'none'
         lightModeBtn.style.display = 'flex'
         lightModeBtnMobile.style.display = 'flex'
-        window.localStorage.setItem('Tema', 'Light')
+        window.localStorage.setItem('Tema', 'light')
         console.log(Tema)
   }
 }
