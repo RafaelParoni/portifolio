@@ -61,7 +61,37 @@
     border-top-right-radius: 60%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 35%;
-    
+    animation-name: ImgAnimation;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ImgAnimation {
+    0% {
+        border-top-left-radius: 40%;
+        border-top-right-radius: 60%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 35%;
+    }
+    35% {
+        border-top-left-radius: 35%;
+        border-top-right-radius: 80%;
+        border-bottom-left-radius: 70%;
+        border-bottom-right-radius: 55%;
+    }
+    65% {
+        border-top-left-radius: 70%;
+        border-top-right-radius: 40%;
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 65%;
+    }
+    100% {
+        border-top-left-radius: 40%;
+        border-top-right-radius: 60%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 35%;
+    }
 }
 .HabPageSobre {
     background-color: green;
