@@ -39,7 +39,7 @@ function NavBar(){
             window.localStorage.setItem('Tema', 'dark')
         }else {
             htmlBody.removeAttribute('class')
-            htmlBody.setAttribute('class', 'dark-light')
+            htmlBody.setAttribute('class', 'light-mode')
             DarkModeBtn.style.display = 'none'
             DarkModeBtnMobile.style.display = 'none'
             lightModeBtn.style.display = 'flex'
