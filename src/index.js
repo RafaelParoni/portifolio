@@ -6,6 +6,7 @@ import Inicio from './Pages/Inicio/Inicio';
 import Sobre from './Pages/Sobre/Sobre';
 import Background from './components/Background/Background';
 import NavBar from './components/NavBar/Navbar';
+import ScrollBtn from './components/ButtonScroll/Scroll';
 import SearchProjeto from './Pages/ProjetosPage/Search/Search';
 import ProjetosPage from './Pages/ProjetosPage/Projetos.js'; 
  
@@ -43,10 +44,21 @@ async function DedetectMode(){
 }
 setTimeout( DedetectMode, 100)
 
+
+window.addEventListener("scroll", (event) => {
+  var scrollBtn = document.getElementById('BtnScroll')
+  if(window.scrollY > 281){
+    scrollBtn.style.display = 'flex'
+  }else{
+    scrollBtn.style.display = 'none'
+  }
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
   <BrowserRouter> 
    <NavBar/> 
+   <ScrollBtn/>
     <Routes>
       <Route path="/" element={<Inicio />} />
       <Route path="/inicio" element={<Inicio />} />

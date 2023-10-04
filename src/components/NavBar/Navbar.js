@@ -53,7 +53,7 @@ function NavBar(){
     }
 
     return(
-        <div className='Navbar'>
+        <div className='Navbar' id='top'>
             <div className='NavbarLogo'>
                     <img alt='tes' src={Logo}/> 
                     <a href='https://www.instagram.com/rafaelparroni/'><b>Rafael Paroni Silva</b></a>
