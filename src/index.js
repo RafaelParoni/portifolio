@@ -58,6 +58,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
   <BrowserRouter> 
    <NavBar/> 
+   <a href='#top' id='top'>Top Page</a>
    <ScrollBtn/>
     <Routes>
       <Route path="/" element={<Inicio />} />
