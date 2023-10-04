@@ -18,7 +18,7 @@
 }
 .BtnScroll {
     position: fixed;
-    display: flex;
+    display: none;
     bottom: 50px;
     right: 25px;
     font-size: 30px;
