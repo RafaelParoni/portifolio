@@ -68,7 +68,7 @@ root.render(
       <Route path='/projetos' element={<ProjetosPage/>}/>
       <Route path='/projetos/search' element={<SearchProjeto/>}/>
     </Routes>
-   <Background/>
+   <Background/>  
   </BrowserRouter> 
 );
 
