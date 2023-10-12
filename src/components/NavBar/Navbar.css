@@ -17,7 +17,13 @@
     --navbarMobileText-color: #fff;
 }
 
-
+.BlurNavbar {
+    background-color: #020202;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    filter: blur(15px);
+}
 .Navbar {
     width: 100vw;
     height: 50px;

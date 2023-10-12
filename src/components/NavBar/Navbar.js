@@ -53,29 +53,32 @@ function NavBar(){
     }
 
     return(
-        <div className='Navbar'>
-            <div className='NavbarLogo'>
-                    <img alt='tes' src={Logo}/> 
-                    <a href='https://www.instagram.com/rafaelparroni/'><b>Rafael Paroni Silva</b></a>
-            </div>
-            <div className='NavbarHref '>
-                <button onClick={()=>PageRedirect('/inicio')} ><b>Inicio</b></button>
-                <button onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
-                <button onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
-                <button onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
-                <button onClick={()=> ModeScreen()}><span id='DarkMode'><MdDarkMode size={20}/></span><span id='LightMode'><MdLightMode size={20}/></span></button>
-            </div>
-            <div className='NavbarHref Mobile'>
-                <button  onClick={()=> OpenNavbarMobile('NavbarMobile')}><MdDensityMedium id='NavbarMobileOpen' size={25}/> <MdClear id='NavbarMobileClose' size={25}/></button>
-                <div id='NavbarMobile'  className='ScreenMobileNavbar'>
-                    <button  className='BtnMobileNavbar' onClick={()=>PageRedirect('/inicio')}><b>Inicio</b></button>
-                    <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
-                    <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
-                    <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
-                    <button className='BtnMobileNavbar' onClick={()=> ModeScreen()}><span id='DarkModeMobile'><MdDarkMode size={20}/></span><span id='LightModeMobile'><MdLightMode size={20}/></span></button>
+        <>
+            <div className='BlurNavbar'></div>
+            <div className='Navbar'>
+                <div className='NavbarLogo'>
+                        <img alt='tes' src={Logo}/> 
+                        <a href='https://www.instagram.com/rafaelparroni/'><b>Rafael Paroni Silva</b></a>
+                </div>
+                <div className='NavbarHref '>
+                    <button onClick={()=>PageRedirect('/inicio')} ><b>Inicio</b></button>
+                    <button onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
+                    <button onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
+                    <button onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
+                    <button onClick={()=> ModeScreen()}><span id='DarkMode'><MdDarkMode size={20}/></span><span id='LightMode'><MdLightMode size={20}/></span></button>
+                </div>
+                <div className='NavbarHref Mobile'>
+                    <button  onClick={()=> OpenNavbarMobile('NavbarMobile')}><MdDensityMedium id='NavbarMobileOpen' size={25}/> <MdClear id='NavbarMobileClose' size={25}/></button>
+                    <div id='NavbarMobile'  className='ScreenMobileNavbar'>
+                        <button  className='BtnMobileNavbar' onClick={()=>PageRedirect('/inicio')}><b>Inicio</b></button>
+                        <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
+                        <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
+                        <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
+                        <button className='BtnMobileNavbar' onClick={()=> ModeScreen()}><span id='DarkModeMobile'><MdDarkMode size={20}/></span><span id='LightModeMobile'><MdLightMode size={20}/></span></button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
