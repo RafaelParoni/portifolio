@@ -149,18 +149,18 @@
     flex-wrap: wrap;
     align-items: center;
     grid-gap: 15px;
-    border: 1px solid #fff;
+    border: 1px solid var(--text-color);
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 .HabiMaisUtilits span {
     padding: 0;
-    color: #fff;
+    color: var(--text-color);
     margin: 0;
     width: 100%;
 }
 .HabiMaisUtilits span a {
-    color: #fff;
+    color: var(--text-color);;
     text-decoration: none;
 }
 .HabiMaisUtilits legend {
@@ -169,7 +169,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0.2em 0.5em;
-    color: #fff;
+    color: var(--text-color);;
 }
 .HabiMaisUtilits legend::before{
     position: absolute;
