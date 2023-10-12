@@ -51,18 +51,47 @@ function SearchProjeto(){
         const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
         const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
         var img = ''
-        if(item === 'html'){img = Html}
-        else if(item === 'php'){img = PHP}
-        else if(item === 'javascript'){img = Javascript}
-        else if(item === 'node-js'){img = Nodejs}
-        else if(item === 'mysql'){img = MySQL}
-        else if(item === 'python'){img = Python}
-        else if(item === 'react-js'){img = Reactjs}
-        else if(item === 'css'){img = Css}
-        else if(item === 'firebase'){img = Firebase}
-        else if(item === 'npm'){img = Npm}
-        else if(item === 'discordjs'){img = Discordjs}
-        else if(item === 'typescript'){img = Typescript}
+
+        switch(item){
+            case 'html': 
+                img = Html  
+                break;
+            case 'php': 
+                img = PHP  
+                break;
+            case 'javascript': 
+                img = Javascript
+                break;
+            case 'node-js': 
+                img = Nodejs
+                break;
+            case 'mysql': 
+                img = MySQL
+                break;
+            case 'python': 
+                img = Python
+                break;
+            case 'react-js': 
+                img = Reactjs
+                break;
+            case 'css': 
+                img = Css
+                break;
+            case 'firebase': 
+                img = Firebase
+                break;
+            case 'npm': 
+                img = Npm
+                break;
+            case 'discordjs': 
+                img = Discordjs
+                break;
+            case 'typescript': 
+                img = Typescript
+                break;
+            default:
+                img = Html
+        }
         return <div className="languageSearch">
                     {item}
                     <img alt="language" src={img}  width={100}/>
