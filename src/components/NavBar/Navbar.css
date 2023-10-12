@@ -3,22 +3,25 @@
     --shadow-color: #000;
     --backgroundMobile-color: rgba(0,0, 0, 0.5);
     --navbarMobileText-color: #fff;
+    --BlurNavbar-color: #ffffff;
 }
 .dark-mode:root {
     --text-color: #fff;
     --shadow-color: #fff;
     --backgroundMobile-color: rgba(277,277, 277, 0.5);
     --navbarMobileText-color: #000;
+    --BlurNavbar-color: #020202;
 }
 .light-mode:root {
     --text-color: #000;
     --backgroundMobile-color: rgba(0,0, 0, 0.5);
     --shadow-color: #000;
     --navbarMobileText-color: #fff;
+    --BlurNavbar-color: #ffffff;
 }
 
 .BlurNavbar {
-    background-color: #020202;
+    background-color: var(--BlurNavbar-colorg);
     width: 100vw;
     height: 50px;
     position: fixed;
