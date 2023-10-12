@@ -46,6 +46,10 @@ function SearchProjeto(){
         const MySQL = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
         const Python = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
         const Reactjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+        const Firebase = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg'
+        const Typescript = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg'
+        const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
+        const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
         var img = ''
         if(item === 'html'){img = Html}
         else if(item === 'php'){img = PHP}
@@ -55,6 +59,10 @@ function SearchProjeto(){
         else if(item === 'python'){img = Python}
         else if(item === 'react-js'){img = Reactjs}
         else if(item === 'css'){img = Css}
+        else if(item === 'firebase'){img = Firebase}
+        else if(item === 'npm'){img = Npm}
+        else if(item === 'discordjs'){img = Discordjs}
+        else if(item === 'typescript'){img = Typescript}
         return <div className="languageSearch">
                     {item}
                     <img alt="language" src={img}  width={100}/>
