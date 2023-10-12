@@ -2,19 +2,19 @@
     --text-color: #000;
     --shadow-color: #000;
     --BackgroundInfo: rgba(163, 163, 163, 0.6);
-    --backgroundProjectDiv: rgba(223, 223, 223, 0.9);
+    --backgroundProjectDiv: rgba(223, 223, 223, 0.5);
 }
 .dark-mode:root {
     --text-color: #fff;
     --shadow-color: #fff;
     --BackgroundInfo: rgba(80, 80, 80, 0.6);
-    --backgroundProjectDiv: rgba(20, 20, 20, 0.9);
+    --backgroundProjectDiv: rgba(20, 20, 20, 0.5);
 }
 .light-mode:root {
     --text-color: #000;
     --shadow-color: #000;
     --BackgroundInfo: rgba(163, 163, 163, 0.6);
-    --backgroundProjectDiv: rgba(223, 223, 223, 0.9);
+    --backgroundProjectDiv: rgba(223, 223, 223, 0.5);
 }
 
 .ProjetoListPage {
