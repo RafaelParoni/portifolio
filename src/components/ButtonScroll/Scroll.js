@@ -5,7 +5,7 @@ import {FaArrowUp} from 'react-icons/fa6'
 function ScrollBtn(){
 
     return (
-      <a href='#top'><button id='BtnScroll' className='BtnScroll'><FaArrowUp/></button></a> 
+      <button onClick={function(){window.scrollTo({ top: 0, behavior: 'smooth'})}} id='BtnScroll' className='BtnScroll'><FaArrowUp/></button>
     )
 }
 
