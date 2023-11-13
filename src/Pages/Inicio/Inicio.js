@@ -3,6 +3,7 @@ import './Inicio.css';
 import Title from './components/Title';
 import Description from './components/Description';
 import ProjetosButton from './components/ProjetosButton';
+import NotificationFunction from '../../components/Notification/Notification';
 
 function Inicio() {
   return (
@@ -12,6 +13,7 @@ function Inicio() {
           <Description/>
           <ProjetosButton/>
       </div>
+      <NotificationFunction/>
     </div>
   );
 }
