@@ -3,7 +3,7 @@ import './background.css';
 function Background() {
 
   return (
-    <ul class="Background">
+    <ul className="Background">
         <li></li>
         <li></li>
         <li></li>
