@@ -8,27 +8,29 @@ function NotificationFunction(){
         switch(respost){
             case false:
                 alert('Agradecemos pela sua resposta! : )')
-                window.localStorage.setItem('QuestRequest', true)
-                console.log(window.localStorage.getItem('QuestRequest'))
                 CloseNotification()
                 break
             default:
                 alert('Redirecionando usuario')
                 window.location = '/quest'
-                window.localStorage.setItem('QuestRequest', true)
-                console.log(window.localStorage.getItem('QuestRequest'))
                 CloseNotification()
 
         }
     }   
     function NotificationRequest(){
-        if(window.localStorage.getItem('QuestRequest') === 'true'){
-            console.log(window.localStorage.getItem('ResquestCount'))
-            window.localStorage.setItem('QuestRequest', 'false')
+
+        if(window.localStorage.getItem('QuestRequest') === undefined){
+            window.localStorage.setItem('QuestRequest', 'true')
+        }
+        if(window.localStorage.getItem('QuestRequest') === 'true' || window.localStorage.getItem('QuestRequest') === null){
             // Mostranddo notification na tela
         }else{
-            window.localStorage.setItem('ResquestCount', parseInt(window.localStorage.getItem('ResquestCount')) + 1 )
-            if(parseInt(window.localStorage.getItem('ResquestCount')) >= 5){
+            var NumberOriginal = parseInt(window.localStorage.getItem('ResquestCount'))
+            if(NumberOriginal < 0){
+                NumberOriginal = 0
+            }
+            window.localStorage.setItem('ResquestCount', NumberOriginal + 1 )
+            if(parseInt(window.localStorage.getItem('ResquestCount')) >= 11){
                 window.localStorage.setItem('QuestRequest', 'true')
                 window.localStorage.setItem('ResquestCount','0')
                  // Voltar a mostrar notification na tela 
@@ -43,6 +45,7 @@ function NotificationFunction(){
 
     function CloseNotification(){
         document.getElementById('NotificationDiv').style.opacity = '0.0'
+        window.localStorage.setItem('QuestRequest', false)
         setTimeout(function(){document.getElementById('NotificationDiv').remove() },1000)
     }
 
