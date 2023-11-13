@@ -40,7 +40,7 @@ function NotificationFunction(){
             }
         }
     }
-    setTimeout(NotificationRequest, 10)
+ //   setTimeout(NotificationRequest, 10)
 
 
     function CloseNotification(){
