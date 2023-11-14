@@ -34,7 +34,7 @@
     background-color: #48d82ba6;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    display: none;
+    display: flex;
     align-items: center;
     left: 0;
     transition: 0.5s;

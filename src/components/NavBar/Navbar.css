@@ -30,6 +30,7 @@
 .Navbar {
     width: 100vw;
     height: 50px;
+    top: 0;
     display: flex;
     position: fixed;
     flex-direction: row;

@@ -1,17 +1,15 @@
 import './Notification.css'
 
-import {FaExclamation} from 'react-icons/fa6'
+import {FaExclamation, FaHand} from 'react-icons/fa6'
 
 function NotificationFunction(){
 
     function respostQuest(respost){
         switch(respost){
             case false:
-                alert('Agradecemos pela sua resposta! : )')
                 CloseNotification()
                 break
             default:
-                alert('Redirecionando usuario')
                 window.location = '/quest'
                 CloseNotification()
 
@@ -40,7 +38,7 @@ function NotificationFunction(){
             }
         }
     }
- //   setTimeout(NotificationRequest, 10)
+    setTimeout(NotificationRequest, 10)
 
 
     function CloseNotification(){
@@ -56,11 +54,10 @@ function NotificationFunction(){
                 <FaExclamation size={30}/>
             </div>
             <div>
-                <h3>Hey, Olá</h3>
-                <span>Voce deseja um site igual a esse?</span>
+                <h3>Hey, Olá <FaHand/> </h3>
+                <span>Você gostaria de ver nossa nova página?</span>
             </div>
-            <button onClick={()=> respostQuest(true)} style={{backgroundColor: '#39ff12a6'}} className='BtnConfirm'>Sim</button>
-            <button  onClick={()=> respostQuest(false)} style={{backgroundColor: '#ec0a0a'}} className='BtnConfirm'>Não</button>
+            <button onClick={()=> respostQuest(true)} style={{backgroundColor: '#39ff12a6'}} className='BtnConfirm'>Ver</button>
         </div>
     )
 }
