@@ -22,13 +22,13 @@ function ProjectQuestDetails(){
                         <span>Por página</span>
                     </div>
                     <div><ul>
-                        <li id="NotAtictve">Banco de dados</li>
+                        <li id="NotAtictve">Banco de dados Firebase</li>
                         <li id="NotAtictve">Paginas Dinamicas</li>
                         <li id="NotAtictve">Javascript</li>
                         <li id="Atictve">Paginas simples</li>
                     </ul></div>
                     <div><button onClick={()=> {window.location = 'https://api.whatsapp.com/send?phone=982087099&text=Gostaria de saber mais sobre a opção Básica do seu site!'}}>Fazer o pedido</button></div>
-                    <span>Pedidos feito pelo WhatsApp</span>
+                    <span>Pedidos feito via WhatsApp</span>
                 </div>
                 
             </div>
@@ -45,13 +45,13 @@ function ProjectQuestDetails(){
                         <span>Por página</span>
                     </div>
                     <div><ul>
-                        <li id="NotAtictve">Banco de dados</li>
+                        <li id="NotAtictve">Banco de dados Firebase</li>
                         <li id="Atictve">Paginas Dinamicas</li>
                         <li id="Atictve">Javascript</li>
                         <li id="Atictve">Paginas complexas</li>
                     </ul></div>
                     <div><button onClick={()=> {window.location = 'https://api.whatsapp.com/send?phone=982087099&text=Gostaria de saber mais sobre a opção Simples  do seu site!'}}>Fazer o pedido</button></div>
-                    <span>Pedidos feito pelo WhatsApp</span>
+                    <span>Pedidos feito via WhatsApp</span>
                 </div>
                 
             </div>
@@ -68,13 +68,13 @@ function ProjectQuestDetails(){
                         <span>Por página</span>
                     </div>
                     <div><ul>
-                        <li id="Atictve">Banco de dados</li>
+                        <li id="Atictve">Banco de dados Firebase</li>
                         <li id="Atictve">Paginas Dinamicas</li>
                         <li id="Atictve">Javascript</li>
                         <li id="Atictve">Paginas complexas</li>
                     </ul></div>
                     <div><button onClick={()=> {window.location = 'https://api.whatsapp.com/send?phone=982087099&text=Gostaria de saber mais sobre a opção Ultra do seu site!'}}>Fazer o pedido</button></div>
-                    <span>Pedidos feito pelo WhatsApp</span>
+                    <span>Pedidos feito via WhatsApp</span>
                 </div>
                 
             </div>
