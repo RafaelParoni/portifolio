@@ -16,12 +16,13 @@
 
 .ProjectQuestPage {
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: auto;
     margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: baseline;
     flex-direction: column;
+    padding-bottom: 25px;
    
 }
 .ProjectQuestPaga-top {
@@ -38,9 +39,7 @@
         grid-gap: 15px;
         margin: 20px;
     }
-    .ProjectQuestPage{
-        height: calc(100vh + 200px);
-    }
+ 
 }
 .content {
     display: flex;
