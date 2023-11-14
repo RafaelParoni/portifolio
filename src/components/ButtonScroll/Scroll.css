@@ -21,16 +21,16 @@
     display: none;
     bottom: 50px;
     right: 25px;
-    font-size: 30px;
+    font-size: 35px;
     padding: 3px 5px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 50px;
     border: none;
-    color: var(--text-color);
-    background-color: var(--navbarMobileText-color);
-    box-shadow: 1px 1px 10px 1px var(--shadow-color);
+    color: #fff;
+    background-color: rgb(8, 123, 230);
+    box-shadow: 0 0 5px 1px #fff;
 }
 .BtnScroll:hover{
     transition: 0.5s;
