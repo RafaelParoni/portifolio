@@ -3,29 +3,21 @@
     --shadow-color: #000;
     --backgroundMobile-color: rgba(0,0, 0, 0.5);
     --navbarMobileText-color: #fff;
-    --BlurNavbar-color: #ffffff;
+    --BlurNavbar-color: rgba(255, 255, 255, 0.26);
 }
 .dark-mode:root {
     --text-color: #fff;
     --shadow-color: #fff;
     --backgroundMobile-color: rgba(277,277, 277, 0.5);
     --navbarMobileText-color: #000;
-    --BlurNavbar-color: #020202;
+    --BlurNavbar-color: rgba(31, 31, 31, 0.26);
 }
 .light-mode:root {
     --text-color: #000;
     --backgroundMobile-color: rgba(0,0, 0, 0.5);
     --shadow-color: #000;
     --navbarMobileText-color: #fff;
-    --BlurNavbar-color: #ffffff;
-}
-
-.BlurNavbar {
-    background-color: var(--BlurNavbar-colorg);
-    width: 100vw;
-    height: 50px;
-    position: fixed;
-    filter: blur(15px);
+    --BlurNavbar-color: rgba(255, 255, 255, 0.26);
 }
 .Navbar {
     width: 100vw;
@@ -38,10 +30,15 @@
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
-    box-shadow: 1px 1px 10px 2px var(--shadow-color);
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
+
+    background: var(--BlurNavbar-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+
 }
 .NavbarHref{
     width: 50vw;

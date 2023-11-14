@@ -54,7 +54,6 @@ function NavBar(){
 
     return(
         <>
-            <div className='BlurNavbar'></div>
             <div className='Navbar'>
                 <div className='NavbarLogo'>
                         <img alt='tes' src={Logo}/> 
