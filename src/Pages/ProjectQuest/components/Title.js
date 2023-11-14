@@ -9,7 +9,7 @@ function ProjectQuestTitle(){
         <div className="ProjectQuestPaga-top">
             <div className="content">
                 <h1>Quest Site</h1>
-                <h4>faça seu pedido de site através dos planos abaixo <FaRegHandPointDown/></h4>
+                <h4>faça seu pedido de site através das opções abaixo <FaRegHandPointDown/></h4>
             </div>
             <div className="PreviewContent">
                 <img alt="" src={TitleImg}/>
