@@ -63,11 +63,11 @@
     height: auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media screen  and (max-width: 640px) { 
     .ProjectQuestPaga-details{
-        flex-direction: column-reverse;
         grid-gap: 15px;
         margin: 20px;
         align-items: baseline;
