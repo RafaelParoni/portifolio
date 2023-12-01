@@ -4,6 +4,9 @@ import { useState } from "react";
 
 import {FaCode, FaSistrix} from 'react-icons/fa6'
 
+
+var exempleType = 'img'
+
 function SearchProjeto(){
     const [Repos, SetRepos] = useState({})
     const [Topics , SetTopics] = useState({})
@@ -23,7 +26,6 @@ function SearchProjeto(){
 
         SetTopics(results.data.topics)
         ReposProjeto = {name: results.data.name}
-        console.log(results.data)
         SearchReposImg()
         SetRepos(results.data)
     }
@@ -34,7 +36,38 @@ function SearchProjeto(){
             url: `https://api.github.com/repos/RafaelParoni/${ReposProjeto.name}/releases#img`
         }
         const results = await axios.request(ReposImg)
-        SetReposImg(results.data[0].name)
+        var exempleObj = {}
+        if(results.data.length > 1){
+            console.log(results)
+            exempleType = 'duelDisplay'
+            exempleObj = {
+                'video': results.data[0].body,
+                'titleVideo': results.data[0].name,
+                'img': results.data[1].body,
+                'titleImg': results.data[1].name,
+            }
+        }else{
+            exempleType = results.data[0].tag_name
+            if(results.data[0].tag_name === 'img'){
+                if(results.data[0].body === ''){
+                    exempleObj = {
+                        'img': results.data[0].name,
+                        'titleImg': results.data[0].name,
+                    }
+                }else{
+                    exempleObj = {
+                        'img': results.data[0].body,
+                        'titleImg': results.data[0].name,
+                    }
+                }
+            }else{
+                exempleObj = {
+                    'video': results.data[0].body,
+                    'titleVideo': results.data[0].name,
+                }
+            }
+        }
+        SetReposImg(exempleObj)
     }
 
     function TopicsBox({item}){
@@ -108,8 +141,19 @@ function SearchProjeto(){
                 <div className="SearchSubTitle">
                     <h3>{Repos.description} <a href={Repos.html_url}> <FaCode/> GITHUB CODE</a></h3>
                 </div>
-                <div className="SearchImg">
-                    <img  alt="" src={ReposImg}/>
+                <div className="SearchExemple">
+                    {exempleType === 'img' && (
+                        <img alt={ReposImg.titleImg} src={ReposImg.img}/>
+                    )}
+                    {exempleType === 'video' && (
+                        <iframe title={ReposImg.titleVideo} src={ReposImg.video}></iframe>
+                    )}
+                    {exempleType === 'duelDisplay' && (
+                        <>
+                            <iframe allowFullScreen title={ReposImg.titleVideo} autoplay src={ReposImg.video}/>
+                            <img  alt={ReposImg.titleImg} src={ReposImg.img}/>
+                        </>
+                    )}
                 </div>
                 <h3>Tecnologias utilizadas:</h3>
                 <div className="languageSearchDiv">
