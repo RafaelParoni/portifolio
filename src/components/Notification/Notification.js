@@ -55,7 +55,7 @@ function NotificationFunction(){
             </div>
             <div>
                 <h3>Hey, Olá <FaHand/> </h3>
-                <span>Você gostaria de ver nossa nova página?</span>
+                <span>veja meu projeto QuestProject! </span>
             </div>
             <button onClick={()=> respostQuest(true)} style={{backgroundColor: '#39ff12a6'}} className='BtnConfirm'>Ver</button>
         </div>
