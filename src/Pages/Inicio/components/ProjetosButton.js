@@ -15,16 +15,22 @@ function ProjetosButton(){
     }
    setTimeout( DedetectMode, 100)
 
-   function PageRedirect(){
-        if(Mode === 'light'){
+   function PageRedirect(page){
+        if(page === 'projetos'){
             window.location = `/projetos`
+        }else if(page === 'sobre'){
+            window.location = `/sobre`
         }else{
-            window.location = `/projetos?m=${Mode}`
-        }
+            window.location = `/curriculo`
+        } 
     }
 
     return (
-        <button onClick={PageRedirect} className="Btn-projetos"><strong>Projetos</strong></button>
+        <div className="Btns">
+            <button onClick={()=> PageRedirect('projetos')} className="Btn"><strong>Projetos</strong></button>
+            <button onClick={()=> PageRedirect('sobre')}className="Btn"><strong>Sobre</strong></button>
+            <button onClick={()=> PageRedirect('curriculo')}className="Btn"><strong>Curriculo</strong></button>
+        </div>
     )
 }
 

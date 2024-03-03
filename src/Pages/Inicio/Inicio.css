@@ -49,10 +49,17 @@
     grid-gap: 2px;
     color: var(--text-color);
 }
-.Btn-projetos {
-    padding: 10px;
-    font-size: 25px;
-    background-color: #00FDCF;
+.Btns {
+    grid-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Btn {
+    padding: 5px;
+    font-size: 20px;
+    background-color: #3636368e;
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,7 +70,7 @@
     -ms-user-select: none; 
     user-select: none; 
 }
-.Btn-projetos:hover {
+.Btn:hover {
     transition: 0.5s;
     box-shadow: 1px 1px 5px var(--text-color);
 }
