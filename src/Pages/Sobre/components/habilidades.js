@@ -2,7 +2,7 @@ import "./../Sobre.css"
 import {FaCode} from 'react-icons/fa6'
 
 
-const PHP = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
+        const PHP = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
         const Html = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
         const Javascript = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
         const Css = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
@@ -14,7 +14,7 @@ const PHP = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original
         const Typescript = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg'
         const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
         const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
-
+        const Axios = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg'
 
 function Habilidades(){
     return (
@@ -26,7 +26,11 @@ function Habilidades(){
                 <fieldset className="HabiMaisUtilits">
                     <legend>Mais utilizadas</legend>
                     <div className="languagesHabi">
-                        <p>Html</p>
+                        <p>Axios</p>
+                        <img alt="Html" src={Axios} />
+                    </div>
+                    <div className="languagesHabi">
+                        <p>Html5</p>
                         <img alt="Html" src={Html} />
                     </div>
                     <div className="languagesHabi">

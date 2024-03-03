@@ -83,10 +83,11 @@ function SearchProjeto(){
         const Typescript = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg'
         const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
         const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
+        const Axios = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg'
         var img = ''
 
         switch(item){
-            case 'html': 
+            case 'html5': 
                 img = Html  
                 break;
             case 'php': 
@@ -121,6 +122,9 @@ function SearchProjeto(){
                 break;
             case 'typescript': 
                 img = Typescript
+                break;
+            case 'axios': 
+                img = Axios
                 break;
             default:
                 img = Html
