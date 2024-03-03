@@ -19,7 +19,6 @@ function Sobre(){
                 <Habilidades/>
                 <Contato/>
             </div>
-            <NotificationFunction/>
         </div>
         
     )

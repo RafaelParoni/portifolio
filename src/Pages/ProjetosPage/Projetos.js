@@ -8,7 +8,6 @@ function ProjetosPage(){
     return (
         <div>
             <ProjetosList/>
-            <NotificationFunction/>
         </div>
     )
 }

@@ -13,7 +13,6 @@ function Inicio() {
           <Description/>
           <ProjetosButton/>
       </div>
-      <NotificationFunction/>
     </div>
   );
 }
