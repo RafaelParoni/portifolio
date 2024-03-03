@@ -63,8 +63,8 @@ function NavBar(){
                     <button onClick={()=>PageRedirect('/inicio')} ><b>Inicio</b></button>
                     <button onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
                     <button onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
+                    <button onClick={()=>PageRedirect('/curriculo')}><b>Curriculo</b></button>
                     <button onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
-                    <button onClick={()=>PageRedirect('/quest')}><b>Quest Project</b></button>
                     <button onClick={()=> ModeScreen()}><span id='DarkMode'><MdDarkMode size={20}/></span><span id='LightMode'><MdLightMode size={20}/></span></button>
                 </div>
                 <div className='NavbarHref Mobile'>
@@ -73,8 +73,8 @@ function NavBar(){
                         <button  className='BtnMobileNavbar' onClick={()=>PageRedirect('/inicio')}><b>Inicio</b></button>
                         <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/sobre')}><b>Sobre</b></button>
                         <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/projetos')}><b>Projetos</b></button>
+                        <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/curriculo')}><b>Curriculo</b></button>
                         <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/contato')}><b>Contato</b></button>
-                        <button className='BtnMobileNavbar' onClick={()=>PageRedirect('/quest')}><b>Quest</b></button>
                         <button className='BtnMobileNavbar' onClick={()=> ModeScreen()}><span id='DarkModeMobile'><MdDarkMode size={20}/></span><span id='LightModeMobile'><MdLightMode size={20}/></span></button>
                     </div>
                 </div>

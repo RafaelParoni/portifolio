@@ -15,8 +15,7 @@
   import ScrollBtn from './components/ButtonScroll/Scroll';
   import SearchProjeto from './Pages/ProjetosPage/Search/Search';
   import ProjetosPage from './Pages/ProjetosPage/Projetos.js'; 
-  import ProjectQuestPage from './Pages/ProjectQuest/projectQuest.js';
-
+  import Curriculo from './Pages/curriculo/Curriculo.js';
   
   var Tema = window.localStorage.getItem('Tema')
 
@@ -74,7 +73,7 @@
         <Route path='/contato' element={<Sobre/>}/>
         <Route path='/projetos' element={<ProjetosPage/>}/>
         <Route path='/projetos/search' element={<SearchProjeto/>}/>
-        <Route path="/quest" element={<ProjectQuestPage />} />
+        <Route path='/curriculo' element={<Curriculo/>}/>
       </Routes>
     <Background/>  
     </BrowserRouter> 
