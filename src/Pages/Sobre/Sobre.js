@@ -3,7 +3,7 @@ import Title from "./components/Title";
 import Information from "./components/Information";
 import Habilidades from "./components/habilidades";
 import Contato from "./components/Contatos";
-import NotificationFunction from "../../components/Notification/Notification";
+
 
 function Sobre(){
     setTimeout(function(){
