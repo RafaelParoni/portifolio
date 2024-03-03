@@ -6,8 +6,7 @@ function Information(){
         <div className="SobreInformation">
             <img alt="IconImage" src={Logo}/>
             <p>
-                Meu nome é Rafael Paroni, Sou um rapaz que estuda desenvolvimento web nas horas livres e pretende trabalhar nesta área, <br/> Onde trabalho com sites e bancos de dados,
-                Atualmente tenho 17 anos.
+                Meu nome é Rafael Paroni, Sou um rapaz que estuda desenvolvimento web nas horas livres, estou atualmente na Universidade Paulista - Unip
             </p>
         </div>
     )

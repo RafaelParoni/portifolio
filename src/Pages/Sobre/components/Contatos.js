@@ -1,38 +1,13 @@
 import "./../Sobre.css"
 import {FaAddressBook} from 'react-icons/fa6'
-import {RiGithubLine, RiInstagramLine, RiTwitterLine, RiDiscordLine, RiYoutubeLine, RiChromeLine} from 'react-icons/ri'
+import {RiGithubLine, RiInstagramLine, RiLinkedinBoxLine , RiYoutubeLine, RiChromeLine} from 'react-icons/ri'
 import Sound from './../../../sounds/copySound.wav'
 
 function Contato(){
 
 
     function ContatoLink(value){
-        if(value === 'discord'){    
-            navigator.clipboard.writeText('rafael74');
-            var audio = new Audio(Sound);
-            audio.volume = 0.05;
-            audio.play();
-            let id = null;
-            const elem = document.getElementById('discord');
-            let posMAIS = -15;
-            clearInterval(id);
-            id = setInterval(frame, 20);
-            function frame() {
-                if (posMAIS === 2) {
-                    clearInterval(id);
-                } else {
-                    posMAIS++;
-                    elem.style.top = posMAIS + "vh";
-                }
-            }
-            setTimeout(function frame() {
-                const elem = document.getElementById('discord');
-                elem.style.top = '-50px'
-                
-            }, 3000)
-        }else{
-            window.open(value)
-        }
+        window.open(value)   
     }
     return (
         <div>
@@ -42,8 +17,7 @@ function Contato(){
             <div className="TypHabi">
                 <button onClick={()=> ContatoLink('https://github.com/RafaelParoni')} className="SocialHabi"><RiGithubLine/></button>
                 <button  onClick={()=> ContatoLink('https://www.instagram.com/')} className="SocialHabi"><RiInstagramLine/></button>
-                <button onClick={()=> ContatoLink('https://twitter.com/RafaelParoni')}  className="SocialHabi"><RiTwitterLine/></button>
-                <button  onClick={()=> ContatoLink('discord')}  className="SocialHabi"><RiDiscordLine/></button><span id="discord">Nome de usuario copiado!</span>
+                <button onClick={()=> ContatoLink('https://twitter.com/RafaelParoni')}  className="SocialHabi"><RiLinkedinBoxLine  /></button>
                 <button onClick={()=> ContatoLink('https://www.youtube.com/channel/UCCjwv7_RJteoSRhbRqFqP-Q')}  className="SocialHabi"><RiYoutubeLine/></button>
                 <button  onClick={()=> ContatoLink('https://rafaelparoni.vercel.app/')} className="SocialHabi"><RiChromeLine/></button>
             </div>
