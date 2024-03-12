@@ -15,6 +15,7 @@ import {FaCode} from 'react-icons/fa6'
         const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
         const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
         const Axios = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg'
+        const socketio = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg'
 
 function Habilidades(){
     return (
@@ -28,6 +29,10 @@ function Habilidades(){
                     <div className="languagesHabi">
                         <p>Axios</p>
                         <img alt="Html" src={Axios} />
+                    </div>
+                    <div className="languagesHabi">
+                        <p>Socket.io</p>
+                        <img alt="Html" src={socketio} />
                     </div>
                     <div className="languagesHabi">
                         <p>Html5</p>

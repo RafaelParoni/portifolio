@@ -84,7 +84,9 @@ function SearchProjeto(){
         const Npm = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'
         const Discordjs = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg'
         const Axios = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg'
+        const socketio = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg'
         var img = ''
+        console.log(item)
 
         switch(item){
             case 'html5': 
@@ -125,6 +127,9 @@ function SearchProjeto(){
                 break;
             case 'axios': 
                 img = Axios
+                break;
+            case 'socket-io': 
+                img = socketio
                 break;
             default:
                 img = Html
