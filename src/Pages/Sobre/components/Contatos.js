@@ -17,7 +17,7 @@ function Contato(){
             <div className="TypHabi">
                 <button onClick={()=> ContatoLink('https://github.com/RafaelParoni')} className="SocialHabi"><RiGithubLine/></button>
                 <button  onClick={()=> ContatoLink('https://www.instagram.com/')} className="SocialHabi"><RiInstagramLine/></button>
-                <button onClick={()=> ContatoLink('https://twitter.com/RafaelParoni')}  className="SocialHabi"><RiLinkedinBoxLine  /></button>
+                <button onClick={()=> ContatoLink('https://www.linkedin.com/in/rafael-paroni-43961a301/')}  className="SocialHabi"><RiLinkedinBoxLine  /></button>
                 <button onClick={()=> ContatoLink('https://www.youtube.com/channel/UCCjwv7_RJteoSRhbRqFqP-Q')}  className="SocialHabi"><RiYoutubeLine/></button>
                 <button  onClick={()=> ContatoLink('https://rafaelparoni.vercel.app/')} className="SocialHabi"><RiChromeLine/></button>
             </div>
