@@ -6,7 +6,7 @@ function Information(){
         <div className="SobreInformation">
             <img alt="IconImage" src={Logo}/>
             <p>
-                Estudante de graduação em [Insira sua área de estudo] na Universidade Paulista com paixão por desenvolvimento web. <br/>
+                Estudante de graduação em <b> Ciência da computação </b>  na Universidade Paulista com paixão por desenvolvimento web. <br/>
 
                 Nas horas vagas, me dedico a aprender e aprimorar minhas habilidades em linguagens de programação como HTML, CSS, JavaScript e React.js, além de explorar a conexão com bancos de dados. <br/>
                 
