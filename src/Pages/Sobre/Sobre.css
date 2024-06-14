@@ -47,7 +47,7 @@
     border-radius: 15px;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     grid-gap: 20px;
     color:var(--text-color) ;
