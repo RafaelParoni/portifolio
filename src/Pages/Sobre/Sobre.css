@@ -57,6 +57,7 @@
 }
 .SobreInformation img {
     width: 150px;
+    height: 150px;
     border-top-left-radius: 40%;
     border-top-right-radius: 60%;
     border-bottom-left-radius: 50%;
