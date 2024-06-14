@@ -6,7 +6,29 @@ function Information(){
         <div className="SobreInformation">
             <img alt="IconImage" src={Logo}/>
             <p>
-                Meu nome é Rafael Paroni, Sou um rapaz que estuda desenvolvimento web nas horas livres, estou atualmente na Universidade Paulista - Unip
+                Estudante de graduação em [Insira sua área de estudo] na Universidade Paulista com paixão por desenvolvimento web. <br>
+
+                Nas horas vagas, me dedico a aprender e aprimorar minhas habilidades em linguagens de programação como HTML, CSS, JavaScript e React.js, além de explorar a conexão com bancos de dados. <br>
+                
+                Tenho experiência prática na criação de sites e já desenvolvi [Insira a quantidade] projetos utilizando as tecnologias que domino. <br>
+                
+                Sou um profissional proativo, em constante busca por novos desafios e conhecimentos. Acredito na importância do aprendizado contínuo e estou sempre buscando aprimorar minhas habilidades para me tornar um desenvolvedor web completo e bem-sucedido. <br>
+                
+                Minhas principais áreas de interesse: <br>
+
+                <ul>
+                  <li>Desenvolvimento web front-end e back-end</li>
+                  <li>Criação de sites e interfaces web responsivas</li>
+                  <li>Integração com bancos de dados</li>
+                  <li>React.js</li>
+                  <li>JavaScript</li>
+                  <li>CSS</li>
+                  <li>HTML</li>
+                </ul>
+
+                Estou aberto a novas oportunidades e desafios na área de desenvolvimento web. <br>
+
+                Entre em contato comigo para saber mais sobre meus projetos e experiências. <br>
             </p>
         </div>
     )
