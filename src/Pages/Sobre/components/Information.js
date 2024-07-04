@@ -10,7 +10,7 @@ function Information(){
 
                 Nas horas vagas, me dedico a aprender e aprimorar minhas habilidades em linguagens de programação como HTML, CSS, JavaScript e React.js, além de explorar a conexão com bancos de dados. <br/>
                 
-                Tenho experiência prática na criação de sites e já desenvolvi [Insira a quantidade] projetos utilizando as tecnologias que domino. <br/>
+                Tenho experiência prática na criação de sites e já desenvolvi mais de 15 projetos utilizando as tecnologias que domino. <br/>
                 
                 Sou um profissional proativo, em constante busca por novos desafios e conhecimentos. Acredito na importância do aprendizado contínuo e estou sempre buscando aprimorar minhas habilidades para me tornar um desenvolvedor web completo e bem-sucedido. <br/>
                 
