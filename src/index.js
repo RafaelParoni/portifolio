@@ -9,10 +9,6 @@
 
   // Import Pages/Componentes
   import Inicio from './Pages/Inicio/Inicio';
-  import Sobre from './Pages/Sobre/Sobre';
-  import SearchProjeto from './Pages/ProjetosPage/Search/Search';
-  import ProjetosPage from './Pages/ProjetosPage/Projetos.js'; 
-  import Curriculo from './Pages/curriculo/Curriculo.js';
 
 
 
@@ -27,12 +23,6 @@
      <NavBar/>
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path='/contato' element={<Sobre/>}/>
-        <Route path='/projetos' element={<ProjetosPage/>}/>
-        <Route path='/projetos/search' element={<SearchProjeto/>}/>
-        <Route path='/curriculo' element={<Curriculo/>}/>
       </Routes>
     </BrowserRouter> 
   );
