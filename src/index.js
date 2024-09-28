@@ -1,4 +1,3 @@
-  
   import React from 'react'; // import React.js
 
   // import React Routes 
@@ -10,11 +9,22 @@
   // Import Pages/Componentes
   import Inicio from './Pages/Inicio/Inicio';
 
-
-
   // Import Contents
   import NavBar from './components/NavBar/Navbar.js';
-  
+  import { AutoModeDetection } from './functions/ThemeMode.js';
+
+
+
+  setTimeout(function(){
+    ThemeAutoSelection()
+  }, 10)
+
+
+  function ThemeAutoSelection(){
+    document.getElementById("html").setAttribute("class", AutoModeDetection())
+  }
+
+
 
 
   const root = ReactDOM.createRoot(document.getElementById('root'));

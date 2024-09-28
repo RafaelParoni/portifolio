@@ -45,7 +45,7 @@
 }
 .redes button:hover {
     transition: 1s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .menu {
     display: flex;
@@ -56,10 +56,11 @@
     height: 100%;
     background-color: transparent;
     border: none;
-    border-top: 2px solid red;
+    border-top: 2px solid transparent;
     border-bottom: 2px solid transparent
 }
 .menu button:hover {
     transition: 0.5s;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #09c3e4;
+    
 }
