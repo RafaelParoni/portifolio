@@ -1,11 +1,2 @@
-:root {
-    --text-color: #fff;
-}
-.dark:root {
-    --text-color: #000;
-}
-.light:root {
-    --text-color: #fff;
-}
 
 
