@@ -14,7 +14,7 @@
   import { AutoModeDetection } from './functions/ThemeMode.js';
 
   setTimeout(function(){
-    ThemeAutoSelection()
+    ThemeAutoSelection() // Chama a função para definir o tema do site -- Dark | Light
   }, 10)
 
   function ThemeAutoSelection(){
