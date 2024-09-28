@@ -1,10 +1,10 @@
 :root {
     --text-color: #fff;
 }
-.dark-mode:root {
+.dark:root {
     --text-color: #000;
 }
-.light-mode:root {
+.light:root {
     --text-color: #fff;
 }
 

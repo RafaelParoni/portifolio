@@ -13,19 +13,13 @@
   import NavBar from './components/NavBar/Navbar.js';
   import { AutoModeDetection } from './functions/ThemeMode.js';
 
-
-
   setTimeout(function(){
     ThemeAutoSelection()
   }, 10)
 
-
   function ThemeAutoSelection(){
     document.getElementById("html").setAttribute("class", AutoModeDetection())
   }
-
-
-
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render( 
