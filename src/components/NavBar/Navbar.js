@@ -27,14 +27,14 @@ function NavBar(){
     return(
         <div className='navbar'>
             <div className='menu'>
-                <button>Inicio</button>
-                <button>Sobre</button>
-                <button>Projetos</button>
+                <button onClick={()=> window.location.hash = ''}>Inicio</button>
+                <button onClick={()=> window.location.hash = 'sobre'}>Sobre</button>
+                <button onClick={()=> window.location.hash = 'projetos'}>Projetos</button>
             </div>
             <div className='redes'>
-                <button><BsLinkedin/></button>
-                <button><BsGithub/></button>
-                <button><BsInstagram/></button>
+                <button onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
+                <button onClick={()=> window.open('https://github.com/RafaelParoni')}><BsGithub/></button>
+                <button onClick={()=> window.open('https://www.instagram.com/rafaelparroni/')}><BsInstagram/></button>
                 <button id='ThemeBtn' onClick={() => alternMode()} >
                     <ThemeBtn />
                 </button>
