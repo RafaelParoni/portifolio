@@ -5,7 +5,9 @@
     --NavbarBackground-liner: linear-gradient(90deg, rgba(32,32,32,0) 0%, rgb(189, 189, 189) 50%, rgba(0,0,0,0) 100%);
     --NavbarBackground-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202020",endColorstr="#000000",GradientType=1);
 
+    --BorderButtonColor: #212121;
 }
+
 .Dark:root{
     --NavbarBackground: rgb(0,0,0);
     --NavbarBackground-moz: -moz-linear-gradient(90deg, rgba(0,0,0,0) 15%, rgb(26, 26, 26) 50%, rgba(0,0,0,0) 90%);
@@ -13,24 +15,21 @@
     --NavbarBackground-liner: linear-gradient(90deg, rgba(0,0,0,0) 15%, rgb(27, 27, 27) 50%, rgba(0,0,0,0) 90%);
     --NavbarBackground-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 
+    --BorderButtonColor: rgb(198,198,198);
 }
   
-
 .navbar {
     width: 100vw;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
-
     background: var(--NavbarBackground);
     background: var(--NavbarBackground-moz);
     background: var(--NavbarBackground-webkit);
     background: var(--NavbarBackground-liner);
     filter: var(--NavbarBackground-filter);
 }
-
 .navbar div:first-child{
     height: 50px;
     width: 300px;
@@ -42,7 +41,6 @@
     height: 50px;
     width: auto;
 } 
-
 .navbar button {
     cursor: pointer;
 }
@@ -61,6 +59,7 @@
     transition: 1s;
     transform: scale(1.05);
 }
+
 .menu {
     display: flex;
     align-items: center;
@@ -76,6 +75,5 @@
 }
 .menu button:hover {
     transition: 0.5s;
-    border-top: 2px solid #09c3e4;
-    
+    border-top: 2px solid var(--BorderButtonColor);
 }
