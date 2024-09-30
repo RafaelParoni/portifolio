@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { BsInstagram, BsGithub, BsLinkedin, BsMoonFill, BsFillBrightnessLowFill    } from "react-icons/bs";
+import { BsEnvelopeFill, BsGithub, BsLinkedin, BsMoonFill, BsFillBrightnessLowFill } from "react-icons/bs";
 import { AutoModeDetection, SetNewMode } from '../../functions/ThemeMode';
 
 
@@ -34,7 +34,7 @@ function NavBar(){
             <div className='redes'>
                 <button onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
                 <button onClick={()=> window.open('https://github.com/RafaelParoni')}><BsGithub/></button>
-                <button onClick={()=> window.open('https://www.instagram.com/rafaelparroni/')}><BsInstagram/></button>
+                <button onClick={()=> window.open('mailto:rafaelparonisilvaa@gmail.com')}><BsEnvelopeFill /></button>
                 <button id='ThemeBtn' onClick={() => alternMode()} >
                     <ThemeBtn />
                 </button>
