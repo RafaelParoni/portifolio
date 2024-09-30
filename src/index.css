@@ -33,3 +33,13 @@ html {
     align-items: center;
     flex-direction: column;
 }
+
+/* Selection Code for Color background */
+::-moz-selection { /* Code for Firefox */
+  color: var(--background);;
+  background: var(--textColor);
+}
+::selection { 
+  color: var(--background);
+  background: var(--textColor);
+}
