@@ -11,13 +11,13 @@ function Curriculo(){
           })
             .then(response => response.blob())
             .then(blob => {
-            let blobUrl = window.URL.createObjectURL(blob);
-            let a = document.createElement('a');
-            a.download = `Currículo - Rafael Paroni - Desenvolvedor web`;
-            a.href = blobUrl;
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
+                let blobUrl = window.URL.createObjectURL(blob);
+                let a = document.createElement('a');
+                a.download = `Currículo - Rafael Paroni - Desenvolvedor web`;
+                a.href = blobUrl;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
           })
     }
     return(
