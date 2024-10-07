@@ -32,10 +32,10 @@ function NavBar(){
                 <button onClick={()=> window.location.hash = 'projetos'}>Projetos</button>
             </div>
             <div className='redes'>
-                <button onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
-                <button onClick={()=> window.open('https://github.com/RafaelParoni')}><BsGithub/></button>
-                <button onClick={()=> window.open('mailto:rafaelparonisilvaa@gmail.com')}><BsEnvelopeFill /></button>
-                <button id='ThemeBtn' onClick={() => alternMode()} >
+                <button aria-label="LinkDin!" data-balloon-pos="down" onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
+                <button aria-label="Github!" data-balloon-pos="down" onClick={()=> window.open('https://github.com/RafaelParoni')}><BsGithub/></button>
+                <button aria-label="Mail!" data-balloon-pos="down"  onClick={()=> window.open('mailto:rafaelparonisilvaa@gmail.com')}><BsEnvelopeFill /></button>
+                <button aria-label="Tema da pagina" data-balloon-pos="down" id='ThemeBtn' onClick={() => alternMode()} >
                     <ThemeBtn />
                 </button>
             </div>

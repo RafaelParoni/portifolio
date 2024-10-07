@@ -1,11 +1,14 @@
-import './Inicio.css';
+import './Inicio.css'
 
+import About from './components/about';
+import Technics from './components/technics';
 
 function Inicio() {
   return (
-    <>
-      <h1>INICIO</h1>
-    </>
+    <main className='inicio'>
+      <About/>
+      <Technics/>
+    </main>
   );
 }
 

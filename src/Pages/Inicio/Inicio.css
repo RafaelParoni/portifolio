@@ -1,2 +1,103 @@
+.inicio {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about {
+    width: min(900px, 90vw);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    padding-inline: 50px;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40% 60% 35% 50%;
+    animation-name: ImgBorderRadiusAnimation;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* border radius rules
+    border-radius: 35% 80% 55% 70%;
+
+    First value: top left
+    Second value: top right
+    third value: bottom right
+    fourth value: bottom left
+*/
+
+@keyframes ImgBorderRadiusAnimation {
+    0% {
+        border-radius: 40% 60% 35% 50%;
+    }
+    35% {
+        border-radius: 35% 80% 55% 70%;
+    }
+    65% {
+        border-radius: 70% 40% 65% 35%;
+    }
+    100% {
+        border-radius: 40% 60% 35% 50%;
+    }
+}
+
+.about-info div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.about-info button {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.about-info button:hover {
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.about-desc {
+    width: min(900px, 90vw);
+    margin: 0 0 50px 0;
+}
+.about-desc h2 {
+    text-align: center;
+}
+.about-desc p {
+    font-size: 20px;
+}
+.about-desc a {
+    color: var(--textColor);
+    text-decoration: underline wavy;
+}
+.about-desc li {
+    font-size: 20px;
+}
 
 
+.tec {
+    width: min(900px, 90vw);
+    height: 400px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    grid-gap: 20px;
+    margin: 0 0 100px 0;
+}
