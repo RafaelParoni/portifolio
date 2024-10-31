@@ -127,3 +127,13 @@
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
+
+.projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: min(900px, 90vw);
+    height: 500px;
+    margin-bottom: 100px;
+}
