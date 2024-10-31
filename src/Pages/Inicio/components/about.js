@@ -1,9 +1,21 @@
 import { BsEnvelopeFill, BsGithub, BsLinkedin, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
 import Icon from './../../../icons/favicon.ico'
-
+import axios from "axios";
 
 
 function About(){
+
+
+    async function ProjetcsLen(){
+        const options = {
+        method: 'GET',
+        url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
+        } 
+        const results = await axios.request(options)
+
+        document.getElementById('QuantProjetos').innerHTML = results.data.length
+    }
+    ProjetcsLen()
 
     return (
         <>
@@ -26,7 +38,7 @@ function About(){
                 <p> 
                     <b>S</b>ou um estudante de graduação em <strong> Ciência da computação </strong> na <strong> <a href="https://www.unip.br/" target="noreferrer"> <BsLink45Deg/>UNIP (Universidade Paulista) </a> </strong> com paixão por desenvolvimento web. <br/> 
                     Nas horas vagas, me dedico a aprender e aprimorar minhas habilidades em linguagens de <br/> programação como HTML, CSS, JavaScript e React.js, além de explorar a conexão com bancos de dados. <br/>
-                    Tenho experiência prática na criação de sites e já desenvolvi mais de <span>(PROJECT-NUMBER)</span> projetos utilizando as tecnologias que domino. <br/>
+                    Tenho experiência prática na criação de sites e já desenvolvi mais de <a href="https://github.com/RafaelParoni?tab=repositories" target="noreferrer"><strong>  <span id="QuantProjetos"></span> projetos </strong> <BsGithub/></a> utilizando as tecnologias que domino. <br/>
                     Minhas principais áreas de interesse:
                 </p>
                 <ul>
