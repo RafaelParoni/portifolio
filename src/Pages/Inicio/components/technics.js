@@ -10,7 +10,7 @@ function Technics(){
         try {
             const options = {
             method: 'GET',
-            url: 'https://api.github.com/users/RafaelPar-oni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
+            url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
             } 
             const results = await axios.request(options)
             var TecsList = []
