@@ -131,9 +131,50 @@
 .projetos {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: green;
+    justify-content: space-around;
     width: min(900px, 90vw);
     height: 500px;
     margin-bottom: 100px;
+    grid-gap: 10px;
+
 }
+
+.projetos 
+.desq{
+    background-color: yellow;
+    height: 450px;
+    width: 550px;
+}
+.projetos
+.repositorios{
+    height: 450px;
+    width: 300px;
+    flex-direction: column;
+    grid-gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.repositorios 
+.rep{
+    background-color: red;
+    height: 150px;
+    width: 285px;
+    margin: 5px 0 5px 0;
+}
+
+.repositorios::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.repositorios::-webkit-scrollbar-track {
+    background: #00000050;        /* color of the tracking area */
+}
+  
+.repositorios::-webkit-scrollbar-thumb {
+    background-color: #ebebeb;    /* color of the scroll thumb */
+    border-radius: 2px;       /* roundness of the scroll thumb */
+
+}
+
+
