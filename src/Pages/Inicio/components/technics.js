@@ -1,29 +1,34 @@
 import axios from "axios"
 import { useState } from "react"
+import errorImg from './../../../icons/error_5171.png'
 
 function Technics(){
 
     const [List, setList] = useState([])
 
     async function SearchTecs(){
-        const options = {
-        method: 'GET',
-        url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
-        } 
-        const results = await axios.request(options)
-        var TecsList = []
-        var x = 0
-        while(x < results.data.length){
-            var i = 0
-            for(i in results.data[x].topics){
-                if(TecsList.includes(results.data[x].topics[i]) === false){
-                    TecsList.push(results.data[x].topics[i])
+        try {
+            const options = {
+            method: 'GET',
+            url: 'https://api.github.com/users/RafaelPar-oni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
+            } 
+            const results = await axios.request(options)
+            var TecsList = []
+            var x = 0
+            while(x < results.data.length){
+                var i = 0
+                for(i in results.data[x].topics){
+                    if(TecsList.includes(results.data[x].topics[i]) === false){
+                        TecsList.push(results.data[x].topics[i])
+                    }
                 }
+                x++
             }
-            x++
+    
+            setList(TecsList)
+        }catch{
+            setList(['Not found'])
         }
-
-        setList(TecsList)
     }
 
     function setReposTecList(){
@@ -51,6 +56,7 @@ function Technics(){
         'c': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg',
         'c++': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg',
         'c#': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg',
+        'Not found': errorImg,
     }
 
     function GenerateListTecs({item, index}){
