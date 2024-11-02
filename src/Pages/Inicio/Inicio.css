@@ -141,36 +141,74 @@
 
 .projetos 
 .desq{
-    background-color: yellow;
+    background-color: #0e0e0edc;
     height: 450px;
     width: 550px;
+    border-radius: 5px 0 0 5px ;
 }
 .projetos
 .repositorios{
     height: 450px;
     width: 300px;
     flex-direction: column;
-    grid-gap: 10px;
+    grid-gap: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
-    border-radius: 5px;
+    background-color: #0e0e0edc;
+    padding: 0 5px 0 5px;
+    border-radius: 0 5px 5px 0 ;
 }
 .repositorios 
 .rep{
-    background-color: red;
-    height: 150px;
+    background-color: #181818;
+    height: auto;
     width: 285px;
     margin: 5px 0 5px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px 5px 5px 5px;
+}
+.rep
+.links {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    grid-gap: 5px;
+    margin: 6px 0 6px 0;
+    
+}
+.rep
+.links a {
+    padding: 4px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rep
+.links a:hover {
+    transform: scale(1.1);
+}
+
+.rep
+.last-updata {
+    font-size: 12px;
+    color: #aaaaaa;
 }
 
 .repositorios::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 5px;               /* width of the entire scrollbar */
 }
-  
 .repositorios::-webkit-scrollbar-track {
     background: #00000050;        /* color of the tracking area */
-}
-  
+} 
 .repositorios::-webkit-scrollbar-thumb {
     background-color: #ebebeb;    /* color of the scroll thumb */
     border-radius: 2px;       /* roundness of the scroll thumb */
