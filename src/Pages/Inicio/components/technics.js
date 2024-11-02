@@ -60,9 +60,13 @@ function Technics(){
     }
 
     function GenerateListTecs({item, index}){
-        return (
-            <div key={index}><span>{item}</span><img alt={item} src={TecsImgLinks[item]} /></div>
-        )
+        if(item === 'destaques'){
+            return(<></>)
+        }else{
+            return (
+                <div key={index}><span>{item}</span><img alt={item} src={TecsImgLinks[item]} /></div>
+            )
+        }
     }
 
     
