@@ -1,7 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 
-import { BsGithub, BsBrowserChrome, BsStarFill, BsCupFill   } from "react-icons/bs";
+import { BsGithub, BsBrowserChrome, BsStarFill, BsCupFill, BsFillCloudyFill    } from "react-icons/bs";
 
 function Projetos(){
 
@@ -41,6 +41,28 @@ function Projetos(){
     }
     setReposTecList()
 
+
+    const languagensColors = {
+        'css': '#33A9DC',
+        'html': '#F16529',
+        'javascript': '#F0DB4F',
+        'react-js': '#61DAFB',
+        'node-js': '#54A345',
+        'php': '#212121',
+        'python': '#407EAF',
+        'mysql': '#094E6C',
+        'firebase': '#FFCA28',
+        'axios': '#5A29E4',
+        'npm': '#CB3837',
+        'socket-io': '#e3e3e3',
+        'java': '#0877BB',
+        'Kotlin': '#F98D13',
+        'c': '#646DC5',
+        'c++': '#085E9F',
+        'c#': '#9F559A',
+
+    }
+
     function GenerateListResp({item, index}){ 
         if(ProjetoDestaque.id === item.id){
             return (<></>)
@@ -60,6 +82,18 @@ function Projetos(){
             }catch{
                 data = 'dataError :c'
             }
+            var languagens = <></>
+            
+            var i = 0 
+            if(item.topics.length !== 0){
+                for(i in item.topics){
+                    if(item.topics[i] !== 'destaques'){
+                        languagens = <>{languagens} <span style={{backgroundColor: languagensColors[item.topics[i]]}} className="languagens">{item.topics[i]}</span></> 
+                    }
+                }
+            }else{
+                languagens = <></>
+            }
             return (
                 <div key={index} className="rep">
                     <h2 style={{margin: '0px'}}>{item.name}</h2>
@@ -69,7 +103,7 @@ function Projetos(){
                         <a href={item.html_url} target="noreferrer"><BsGithub/></a>
                         <a href={item.homepage} target="noreferrer"><BsBrowserChrome/></a>
                     </div>
-                    <span> <BsStarFill color="#ffff00"/>: {item.stargazers_count} -  </span>
+                    <span > <BsStarFill color="#ffff00"/>: {item.stargazers_count}  <BsFillCloudyFill />: {languagens} </span>
                     <span className="last-updata"> Ultima atualização: {data} </span> 
                 </div>
             )

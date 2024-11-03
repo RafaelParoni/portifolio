@@ -202,6 +202,13 @@
     font-size: 12px;
     color: #aaaaaa;
 }
+.rep
+.languagens {
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+    flex-wrap: nowrap;
+    color: black;
+}
 
 .repositorios::-webkit-scrollbar {
     width: 5px;               /* width of the entire scrollbar */
