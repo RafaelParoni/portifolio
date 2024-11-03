@@ -5,7 +5,7 @@ import { BsGithub, BsBrowserChrome, BsStarFill, BsCupFill   } from "react-icons/
 
 function Projetos(){
 
-    const [List, setList] = useState([])
+    const [Projetos, setProjetos] = useState([])
     const [ProjetoDestaque, setProjetoDestaque] = useState([])
 
     async function SearchRepositorios(){
@@ -15,9 +15,9 @@ function Projetos(){
             url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
             } 
             const results = await axios.request(options)
-            var TecsList = results.data
-    
-            setList(TecsList)
+            var TecsList = results.data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+            setProjetos(TecsList)
             var i = 0
             for(i in results.data){
                 if(results.data[i].topics.length > 0){
@@ -30,12 +30,12 @@ function Projetos(){
                 }
             }
         }catch{
-            setList(['Not found'])
+            setProjetos(['Not found'])
         }
     }
 
     function setReposTecList(){
-        if(List.length < 1){
+        if(Projetos.length < 1){
             SearchRepositorios()
         }
     }
@@ -93,7 +93,7 @@ function Projetos(){
             </div>
             <div className="repositorios">
                 <h3 style={{textAlign: 'center'}}>Projetos no Github <BsGithub/></h3>
-                {List.map((List, index) => <GenerateListResp item={List} index={index} />)}
+                {Projetos.map((Projetos, index) => <GenerateListResp item={Projetos} index={index} />)}
             </div>
         </div>
     )
