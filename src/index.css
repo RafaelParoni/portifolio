@@ -17,13 +17,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 
-  background: var(--background);
+ 
   color: var(--textColor);
+  background-color: var(--background);
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+
 }
 
 .main {
