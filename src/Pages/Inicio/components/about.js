@@ -1,7 +1,8 @@
-import { BsEnvelopeFill, BsGithub, BsAt, BsLinkedin, BsInfoCircle, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
+import { BsEnvelopeFill, BsGithub, BsChevronCompactDown,BsHandIndex, BsAt, BsLinkedin, BsInfoCircle, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
 import Icon from './../../../icons/favicon.ico'
-import axios from "axios";
+import axios from "axios"; // get API RESULTS IN projetcsLen
 
+import curriculoUrl from './../../../curriculo.pdf'
 
 function About(){
 
@@ -19,6 +20,20 @@ function About(){
         }
     }
     ProjetcsLen()
+
+
+    function viewDocPDF(){
+        console.log(document.getElementById('about-curriculo').style.height)
+        if(document.getElementById('about-curriculo').style.height === '1000px'){
+            document.getElementById("about-curriculo").style.height = '80px'
+            document.getElementById('curriculo-seta').style.transform = 'rotateX(0deg)'
+  
+        }else{
+            document.getElementById("about-curriculo").style.height = '1000px'
+            document.getElementById('curriculo-seta').style.transform = 'rotateX(180deg)'
+
+        }
+    }
 
     return (
         <>
@@ -56,6 +71,14 @@ function About(){
                     Entre em contato comigo para saber mais sobre meus projetos e experiências.
                 </p>
 
+            </div>
+            <div id="about-curriculo" className="about-curriculo">
+                <span onClick={(e)=> viewDocPDF()} style={{margin: 0, fontSize: '15px', padding: '0', textAlign: 'left', width: '105%'}}>Click para ver o curriculo!</span>
+                <button onClick={(e)=> viewDocPDF()}> 
+                    <h2> <BsHandIndex /> Curriculo  </h2>
+                    <BsChevronCompactDown size={25} id="curriculo-seta"/>
+                </button>
+                <embed  src={curriculoUrl} width="800px" height="900px" />
             </div>
         </>
     )
