@@ -1,4 +1,4 @@
-import { BsEnvelopeFill, BsGithub, BsLinkedin, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
+import { BsEnvelopeFill, BsGithub, BsAt, BsLinkedin, BsInfoCircle, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
 import Icon from './../../../icons/favicon.ico'
 import axios from "axios";
 
@@ -22,7 +22,7 @@ function About(){
             <div className="about">
                 <img src={Icon} alt="FavIcon" />
                 <div className="about-info">
-                    <h1>Rafael Paroni Silva</h1>
+                    <h1><BsAt/>Rafael Paroni Silva</h1>
                     <div>
                         <button aria-label="Copiar link da pagina!" data-balloon-pos="down" onClick={()=> navigator.clipboard.writeText(window.location)}><BsFillShareFill/></button>
                         <button aria-label="LinkeDin!" data-balloon-pos="down" onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
@@ -34,7 +34,7 @@ function About(){
                 </div>
             </div>
             <div className="about-desc" id="sobre">
-                <h2>Sobre mim</h2>
+                <h2><BsInfoCircle/> Sobre mim</h2>
                 <p> 
                     <b>S</b>ou um estudante de graduação em <strong> Ciência da computação </strong> na <strong> <a href="https://www.unip.br/" target="noreferrer"> <BsLink45Deg/>UNIP (Universidade Paulista) </a> </strong> com paixão por desenvolvimento web. <br/> 
                     Nas horas vagas, me dedico a aprender e aprimorar minhas habilidades em linguagens de <br/> programação como HTML, CSS, JavaScript e React.js, além de explorar a conexão com bancos de dados. <br/>
@@ -42,7 +42,7 @@ function About(){
                     Minhas principais áreas de interesse:
                 </p>
                 <ul>
-                    <li>Desenvolvimento web front-end e back-ene</li>
+                    <li>Desenvolvimento web front-end e back-end</li>
                     <li>Criação de sites e interfaces web responsivas</li>
                     <li>Integração com bancos de dados</li>
                     <li>React.js </li>
