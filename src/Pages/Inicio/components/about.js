@@ -14,6 +14,11 @@ function About(){
         const results = await axios.request(options)
 
         document.getElementById('QuantProjetos').innerHTML = results.data.length
+        try{
+            document.getElementById('QuantProjetos').innerHTML = results.data.length
+        }catch(error ){
+            console.error(error)
+        }
     }
     ProjetcsLen()
 
