@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import errorImg from './../../../icons/error_5171.png'
+import { BsCpu } from "react-icons/bs";
 
 function Technics(){
 
@@ -74,7 +75,7 @@ function Technics(){
     return(
         <>
         <div className="tec">
-            <h2>Tecnologias</h2>
+            <h2><BsCpu/> Tecnologias</h2>
             <div className="tec-list">
                 {List.map((List, index) => <GenerateListTecs item={List} index={index} />)}
             </div>
