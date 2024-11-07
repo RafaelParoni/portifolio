@@ -12,8 +12,6 @@ function About(){
         url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
         } 
         const results = await axios.request(options)
-
-        document.getElementById('QuantProjetos').innerHTML = results.data.length
         try{
             document.getElementById('QuantProjetos').innerHTML = results.data.length
         }catch(error ){
