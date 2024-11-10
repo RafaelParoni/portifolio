@@ -16,8 +16,17 @@ function Projetos(){
             } 
             const results = await axios.request(options)
             var TecsList = results.data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+        
+            const token = process.env.REACT_APP_GITHUB_TOKEN;
 
+            const results = await axios.get('https://api.github.com/users/RafaelParoni/repos', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+            var TecsList = results.data.sort((a, b) => b.stargazers_count - a.stargazers_count);
             setProjetos(TecsList)
+            
             var i = 0
             for(i in results.data){
                 if(results.data[i].topics.length > 0){

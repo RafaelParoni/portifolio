@@ -7,12 +7,15 @@ import curriculoUrl from './../../../curriculo.pdf'
 function About(){
 
 
-    async function ProjetcsLen(){
-        const options = {
-        method: 'GET',
-        url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
-        } 
-        const results = await axios.request(options)
+    async function ProjetcsLen(){   
+        const token = process.env.REACT_APP_GITHUB_TOKEN;
+
+        const results = await axios.get('https://api.github.com/users/RafaelParoni/repos', {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+
         try{
             document.getElementById('QuantProjetos').innerHTML = results.data.length
         }catch(error ){
@@ -29,6 +32,7 @@ function About(){
             document.getElementById('curriculo-seta').style.transform = 'rotateX(0deg)'
   
         }else{
+
             document.getElementById("about-curriculo").style.height = '1000px'
             document.getElementById('curriculo-seta').style.transform = 'rotateX(180deg)'
 

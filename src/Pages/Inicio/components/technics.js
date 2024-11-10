@@ -9,11 +9,14 @@ function Technics(){
 
     async function SearchTecs(){
         try {
-            const options = {
-            method: 'GET',
-            url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
-            } 
-            const results = await axios.request(options)
+            const token = process.env.REACT_APP_GITHUB_TOKEN;
+
+            const results = await axios.get('https://api.github.com/users/RafaelParoni/repos', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+   
             var TecsList = []
             var x = 0
             while(x < results.data.length){
