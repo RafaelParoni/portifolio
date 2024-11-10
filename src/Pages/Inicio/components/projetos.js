@@ -1,21 +1,36 @@
 import { useState } from "react"
 import axios from "axios"
 
-import { BsGithub, BsBrowserChrome, BsStarFill, BsCupFill, BsFillCloudyFill    } from "react-icons/bs";
+import { BsGithub, BsPuzzle, BsChevronCompactLeft, BsChevronCompactRight, BsBrowserChrome, BsStarFill, BsCupFill, BsFillCloudyFill    } from "react-icons/bs";
 
 function Projetos(){
 
     const [Projetos, setProjetos] = useState([])
     const [ProjetoDestaque, setProjetoDestaque] = useState([])
 
+    const languagensColors = {
+        'css': '#33A9DC',
+        'html': '#F16529',
+        'javascript': '#F0DB4F',
+        'react-js': '#61DAFB',
+        'node-js': '#54A345',
+        'php': '#33A9DC',
+        'python': '#407EAF',
+        'mysql': '#094E6C',
+        'firebase': '#FFCA28',
+        'axios': '#5A29E4',
+        'npm': '#CB3837',
+        'socket-io': '#e3e3e3',
+        'java': '#0877BB',
+        'Kotlin': '#F98D13',
+        'c': '#646DC5',
+        'c++': '#085E9F',
+        'c#': '#9F559A',
+
+    }
+
     async function SearchRepositorios(){
         try {
-            const options = {
-            method: 'GET',
-            url: 'https://api.github.com/users/RafaelParoni/repos' // url: `https://api.github.com/repos/RafaelParoni/${NameProjeto}` // 'https://api.github.com/users/RafaelParoni/repos'
-            } 
-            const results = await axios.request(options)
-            var TecsList = results.data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         
             const token = process.env.REACT_APP_GITHUB_TOKEN;
 
@@ -33,7 +48,33 @@ function Projetos(){
                     var x = 0
                     for(x in results.data[i].topics){
                         if(results.data[i].topics[x] === 'destaques'){
-                            setProjetoDestaque(results.data[i])
+
+                            var description = results.data[i].description
+                            description = description.slice(0,100) + '...'
+
+                            var data = results.data[i].updated_at
+                            data = data.slice(0,10)
+
+                            var y = 0
+                            var languagens = <></>
+                            for(y in results.data[i].topics){
+                                if(results.data[i].topics[y] !== 'destaques'){
+                                    languagens = <>{languagens} <span style={{backgroundColor: languagensColors[results.data[i].topics[y]]}} className="languagens">{results.data[i].topics[y]}</span> </>
+                                }
+                            }
+
+                            var projetoDestaque = {
+                                'name': results.data[i].name,
+                                'description': description,
+                                'html_url': results.data[i].html_url,
+                                'homepage': results.data[i].homepage,
+                                'data': data,
+                                'stargazers_count': results.data[i].stargazers_count,   
+                                'languagens': languagens,
+                                'id': results.data[i].id
+                            }
+                            setProjetoDestaque(projetoDestaque)
+
                         }
                     }
                 }
@@ -46,33 +87,13 @@ function Projetos(){
     function setReposTecList(){
         if(Projetos.length < 1){
             SearchRepositorios()
+            
         }
     }
     setReposTecList()
 
-
-    const languagensColors = {
-        'css': '#33A9DC',
-        'html': '#F16529',
-        'javascript': '#F0DB4F',
-        'react-js': '#61DAFB',
-        'node-js': '#54A345',
-        'php': '#212121',
-        'python': '#407EAF',
-        'mysql': '#094E6C',
-        'firebase': '#FFCA28',
-        'axios': '#5A29E4',
-        'npm': '#CB3837',
-        'socket-io': '#e3e3e3',
-        'java': '#0877BB',
-        'Kotlin': '#F98D13',
-        'c': '#646DC5',
-        'c++': '#085E9F',
-        'c#': '#9F559A',
-
-    }
-
     function GenerateListResp({item, index}){ 
+        
         if(ProjetoDestaque.id === item.id){
             return (<></>)
         }else{
@@ -104,8 +125,8 @@ function Projetos(){
                 languagens = <></>
             }
             return (
-                <div key={index} className="rep">
-                    <h2 style={{margin: '0px'}}>{item.name}</h2>
+                <div onClick={()=> SearchRepositorioInfo(item.name)}  key={item.id} className="rep">
+                    <h3 style={{margin: '0px'}}><span style={{display: 'none'}} id={item.id} ><BsStarFill/></span>{item.name}</h3>
                     <span>{description}</span>
                     <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><BsCupFill /> Links:</span>
                     <div className="links">
@@ -120,23 +141,224 @@ function Projetos(){
         
     }
 
+    async function SearchRepositorioInfo(name){
+
+        if(name !== undefined){
+            try {
+                const token = process.env.REACT_APP_GITHUB_TOKEN;
+
+                const repositorioResults = await axios.get(`https://api.github.com/repos/RafaelParoni/${name}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                })
+        
+                const repositorio = repositorioResults.data
+                
+    
+                var item = {
+                    'nome': repositorio.name,
+                    'id': repositorio.id,
+                    'github': repositorio.html_url,
+                    'site': repositorio.homepage,
+                    'linguagem': repositorio.language,
+                    'data': repositorio.created_at.slice(0,10),
+                    'favoritos': repositorio.stargazers_count,
+                    'views': repositorio.watchers_count,
+                    'description': repositorio.description,
+                    'tecnologias': '',
+                    'viewExemple': '',
+                }
+    
+                var x = 0
+                var languagens = <></>
+                for (x in repositorio.topics){
+                    if(repositorio.topics[x] !== 'destaques'){
+                        languagens = <>{languagens} <span style={{backgroundColor: languagensColors[repositorio.topics[x]]}} className="languagens">{repositorio.topics[x]}</span> </>
+                    }
+                }
+                item['tecnologias'] = languagens
+    
+                const releasesResult = await axios.get(`https://api.github.com/repos/RafaelParoni/${name}/releases`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                })
+           
+                const releases = releasesResult.data
+                var i = 0
+                var views = []
+                for ( i in releases){
+                    views[i] = releases[i].body
+                }
+    
+                item['viewExemple'] = views
+    
+                ViewProjeto(name, item)
+            }catch(error){
+                console.error(error)
+            }
+        }
+        
+    }
+    SearchRepositorioInfo(ProjetoDestaque.name)
+
+    var slide = []
+    var slideAtual = 'view1'
+
+    function ViewProjeto(name, item){
+
+        if(item.id !== document.getElementById('valueID').value){
+            if(document.getElementById('valueID').value !== ''){
+                document.getElementById(document.getElementById('valueID').value).style.display= 'none'
+                document.getElementById(item.id).style.display = 'inline'
+            }
+        }
+
+        if(slide.length !== 0){
+            var y= 0
+            while(y < slide.length){
+                document.getElementById(`view${y+1}`).remove()
+                y++
+            }
+            slide = []
+        }
+        setTimeout(()=> {
+            document.querySelector('.titleProjeto').innerHTML = name
+            document.querySelector('.descriptionProjeto').innerHTML = item.description
+            document.getElementById('valueID').value = item.id
+    
+            let body = document.getElementById("viewBody")
+
+            if(item.viewExemple.length !== 0){
+                if(item.viewExemple.length === 1){
+                    document.getElementById('btnView1').style.display = 'none'
+                    document.getElementById('btnView2').style.display = 'none'
+                }else{
+                    document.getElementById('btnView1').style.display = 'flex'
+                    document.getElementById('btnView2').style.display = 'flex'
+                }
+                document.querySelector('.viewProjeto').style.display = 'flex'
+                let viewDiv;
+  
+                var style;
+                var i = 0;
+                var x = 0
+                while(i < item.viewExemple.length){
+                    if(i === 0){
+                        style = 'flex'
+                    }else{
+                        style = 'none'
+                    }
+                    x = i + 1
+                    if(item.viewExemple[i].includes('youtube')){
+                        viewDiv = document.createElement("iframe");
+                        viewDiv.style.display = style
+                        viewDiv.title = `youtube-video${x}`
+                        viewDiv.id = 'view' + x
+                        viewDiv.width = 427
+                        viewDiv.height = 240
+                        viewDiv.src = item.viewExemple[i]
+                    }else{
+                        viewDiv = document.createElement("img");
+                        viewDiv.style.display = style
+                        viewDiv.id = 'view' + x
+                        viewDiv.alt = `exemple-img-${x}`
+                        viewDiv.src = item.viewExemple[i]
+    
+                    }
+                    body.appendChild(viewDiv);
+                    slide.push(`view${x}`)
+
+                    
+
+                    i ++
+                }
+            }else{
+                document.querySelector('.viewProjeto').style.display = 'none'
+            }
+        },100)
+        
+
+    }
+
+    function SlideFunction(type){
+        var index;
+        var nextSlide;
+        if(type === 'right'){
+            if(slideAtual !== slide[slide.length -1]){
+                document.getElementById(`${slideAtual}`).style.display = 'none'
+                index = slide.indexOf(slideAtual)
+                nextSlide = index + 1
+                slideAtual = slide[nextSlide]
+                document.getElementById(`${slideAtual}`).style.display = 'flex'
+            }
+        }else if(type === 'left'){
+            if(slideAtual !== slide[0]){
+                document.getElementById(`${slideAtual}`).style.display = 'none'
+                index = slide.indexOf(slideAtual)
+                nextSlide = index - 1
+                slideAtual = slide[nextSlide]
+                document.getElementById(`${slideAtual}`).style.display = 'flex'
+            }
+        }
+
+        
+    }
+
+
+
+    
+
     return (
-        <div className="projetos">
-            <div className="desq">
-                {Object.keys(ProjetoDestaque).length === 0 && (
-                    <h1>NENHUM PROJETO EM DESTAQUE</h1>
-                )}
-                {Object.keys(ProjetoDestaque).length > 0 && (
-                    <div>
-                        PROJETO EM DESTAQUE
+        <div className="projetosMain">
+            <h2 style={{textAlign: 'center'}}> <BsPuzzle /> Projetos</h2>
+            <div className="projetos">
+                <div className="desq">
+                    <div className="tagDestaque"><span><BsStarFill/> Destaque</span></div>
+                    {Object.keys(ProjetoDestaque).length === 0 && (
+                        <div className="projetoDestaque">
+                                
+                        </div>
+                    )}
+                    {Object.keys(ProjetoDestaque).length > 0 && (
+                        <div id="projetoDestaque" className="projetoDestaque">
+                                <h1  className="titleProjeto">teste</h1>
+                                <div className="viewProjeto">
+                                    <button id="btnView1" onClick={()=> SlideFunction('left')}><BsChevronCompactLeft /></button>
+                                        <div id="viewBody">
+
+                                        </div>
+                                    <button id="btnView2"  onClick={()=> SlideFunction('right')}><BsChevronCompactRight/></button>
+                                </div>
+                                <div className="descriptionProjeto">
+                                    descriptionProjeto
+                                </div>
+                                <div className="infoProjeto">
+                                    INFO
+                                </div>
+                                <input type="hidden" id="valueID" value=''/>
+                        </div>
+                    )}
+                </div>
+                <div className="repositorios">
+                    <div  onClick={()=> SearchRepositorioInfo(ProjetoDestaque.name)}  className="rep">
+                        
+                        <h3 style={{margin: '0px'}}> <span id={ProjetoDestaque.id} ><BsStarFill/></span> {ProjetoDestaque.name} </h3>
+                        <span>{ProjetoDestaque.description}...</span>
+                        <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><BsCupFill /> Links:</span>
+                        <div className="links">
+                            <a href={ProjetoDestaque.html_url} target="noreferrer"><BsGithub/></a>
+                            <a href={ProjetoDestaque.homepage} target="noreferrer"><BsBrowserChrome/></a>
+                        </div>
+                        <span > <BsStarFill color="#ffff00"/>: {ProjetoDestaque.stargazers_count}  <BsFillCloudyFill />: {ProjetoDestaque.languagens}  </span>
+                        <span className="last-updata"> Ultima atualização: {ProjetoDestaque.data} </span> 
                     </div>
-
-                )}
-
-            </div>
-            <div className="repositorios">
-                <h3 style={{textAlign: 'center'}}>Projetos no Github <BsGithub/></h3>
-                {Projetos.map((Projetos, index) => <GenerateListResp item={Projetos} index={index} />)}
+                    {Projetos.map((Projetos, index) => <GenerateListResp item={Projetos} index={index} />)}
+                    {Object.keys(Projetos).length === 0 && (
+                        <> teste </>
+                    )}
+                </div>
             </div>
         </div>
     )
