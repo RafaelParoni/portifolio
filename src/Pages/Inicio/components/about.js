@@ -15,7 +15,6 @@ function About(){
                 Authorization: `Bearer ${token}`
             }
         })
-
         try{
             document.getElementById('QuantProjetos').innerHTML = results.data.length
         }catch(error ){
@@ -24,18 +23,13 @@ function About(){
     }
     ProjetcsLen()
 
-
     function viewDocPDF(){
-        console.log(document.getElementById('about-curriculo').style.height)
         if(document.getElementById('about-curriculo').style.height === '1000px'){
             document.getElementById("about-curriculo").style.height = '80px'
             document.getElementById('curriculo-seta').style.transform = 'rotateX(0deg)'
-  
         }else{
-
             document.getElementById("about-curriculo").style.height = '1000px'
             document.getElementById('curriculo-seta').style.transform = 'rotateX(180deg)'
-
         }
     }
 
