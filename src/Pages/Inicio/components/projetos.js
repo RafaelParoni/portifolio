@@ -292,6 +292,10 @@ function Projetos(){
                 nextSlide = index + 1
                 slideAtual = slide[nextSlide]
                 document.getElementById(`${slideAtual}`).style.display = 'flex'
+            }else{
+                document.getElementById(`${slideAtual}`).style.display = 'none'
+                slideAtual = slide[0]
+                document.getElementById(`${slideAtual}`).style.display = 'flex'
             }
         }else if(type === 'left'){
             if(slideAtual !== slide[0]){
@@ -299,6 +303,10 @@ function Projetos(){
                 index = slide.indexOf(slideAtual)
                 nextSlide = index - 1
                 slideAtual = slide[nextSlide]
+                document.getElementById(`${slideAtual}`).style.display = 'flex'
+            }else{
+                document.getElementById(`${slideAtual}`).style.display = 'none'
+                slideAtual = slide[slide.length -1]
                 document.getElementById(`${slideAtual}`).style.display = 'flex'
             }
         }
