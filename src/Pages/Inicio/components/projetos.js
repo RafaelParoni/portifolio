@@ -1,7 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 
-import { BsGithub, BsPuzzle, BsChevronCompactLeft, BsChevronCompactRight, BsBrowserChrome, BsStarFill, BsCupFill, BsFillCloudyFill    } from "react-icons/bs";
+import { BsGithub, BsPuzzle, BsChevronCompactLeft, BsChevronCompactRight, BsBrowserChrome, BsStarFill, BsCupFill, BsFillCloudyFill } from "react-icons/bs";
 
 function Projetos(){
 
@@ -166,18 +166,11 @@ function Projetos(){
                     'favoritos': repositorio.stargazers_count,
                     'views': repositorio.watchers_count,
                     'description': repositorio.description,
-                    'tecnologias': '',
+                    'tecnologias': repositorio.topics,
                     'viewExemple': '',
                 }
     
-                var x = 0
-                var languagens = <></>
-                for (x in repositorio.topics){
-                    if(repositorio.topics[x] !== 'destaques'){
-                        languagens = <>{languagens} <span style={{backgroundColor: languagensColors[repositorio.topics[x]]}} className="languagens">{repositorio.topics[x]}</span> </>
-                    }
-                }
-                item['tecnologias'] = languagens
+             
     
                 const releasesResult = await axios.get(`https://api.github.com/repos/RafaelParoni/${name}/releases`, {
                     headers: {
@@ -224,9 +217,13 @@ function Projetos(){
             slide = []
         }
         setTimeout(()=> {
+            document.getElementById("tecnologiasBody").innerHTML = ''
             document.querySelector('.titleProjeto').innerHTML = name
             document.querySelector('.descriptionProjeto').innerHTML = item.description
             document.getElementById('valueID').value = item.id
+            document.querySelector('.dataUptada').innerHTML = `ultima atualização: ${item.data}`
+
+            
     
             let body = document.getElementById("viewBody")
 
@@ -277,6 +274,26 @@ function Projetos(){
             }else{
                 document.querySelector('.viewProjeto').style.display = 'none'
             }
+
+            var t = 0
+            var languagens = <></>
+
+            let tecBody = document.getElementById("tecnologiasBody")
+            let topicDiv;
+
+            for (t  in item.tecnologias){
+                if(item.tecnologias[t] !== 'destaques'){
+                    topicDiv = document.createElement("span");
+                    topicDiv.innerHTML = item.tecnologias[t]
+                    topicDiv.style.backgroundColor = languagensColors[item.tecnologias[t]]
+                    
+                    tecBody.appendChild(topicDiv);
+                   // languagens = <>{languagens} <span style={{backgroundColor: languagensColors[item.tecnologias[t]]}} className="languagens">{item.tecnologias[t]}</span> </>
+                }
+            }
+
+            
+            console.log(languagens)
         },100)
         
 
@@ -332,6 +349,9 @@ function Projetos(){
                     {Object.keys(ProjetoDestaque).length > 0 && (
                         <div id="projetoDestaque" className="projetoDestaque">
                                 <h1  className="titleProjeto">teste</h1>
+                                <div className="descriptionProjeto">
+                                    descriptionProjeto
+                                </div>
                                 <div className="viewProjeto">
                                     <button id="btnView1" onClick={()=> SlideFunction('left')}><BsChevronCompactLeft /></button>
                                         <div id="viewBody">
@@ -339,12 +359,16 @@ function Projetos(){
                                         </div>
                                     <button id="btnView2"  onClick={()=> SlideFunction('right')}><BsChevronCompactRight/></button>
                                 </div>
-                                <div className="descriptionProjeto">
-                                    descriptionProjeto
-                                </div>
+                                
                                 <div className="infoProjeto">
-                                    INFO
+                                    <div className="links">
+                                        <a href="dada" target="noreferrer"><BsGithub/></a>
+                                        <a href="dada" target="noreferrer"><BsBrowserChrome/></a>
+                                    </div>
+                                    <div id="tecnologiasBody"  className="tecnologias"></div>
+                                    
                                 </div>
+                                <div className="dataUptada"></div>
                                 <input type="hidden" id="valueID" value=''/>
                         </div>
                     )}
