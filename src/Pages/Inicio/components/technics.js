@@ -77,7 +77,7 @@ function Technics(){
 
     return(
         <>
-        <div className="tec">
+        <div id="tecnologia" className="tec">
             <h2><BsCpu/> Tecnologias</h2>
             <div className="tec-list">
                 {List.map((List, index) => <GenerateListTecs item={List} index={index} />)}

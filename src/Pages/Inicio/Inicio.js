@@ -3,6 +3,7 @@ import './Inicio.css'
 import About from './components/about';
 import Technics from './components/technics';
 import Projetos from './components/projetos';
+import Contato from './components/contato';
 
 function Inicio() {
   return (
@@ -10,6 +11,7 @@ function Inicio() {
       <About/>
       <Technics/>
       <Projetos/>
+      <Contato/>
     </main>
   );
 }

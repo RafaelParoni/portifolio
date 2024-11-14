@@ -30,6 +30,9 @@ function NavBar(){
                 <button onClick={()=> window.location.hash = ''}>Inicio</button>
                 <button onClick={()=> window.location.hash = 'sobre'}>Sobre</button>
                 <button onClick={()=> window.location.hash = 'projetos'}>Projetos</button>
+                <button onClick={()=> window.location.hash = 'curriculo'}>curriculo</button>
+                <button onClick={()=> window.location.hash = 'tecnologia'}>tecnologias</button>
+                <button onClick={()=> window.location.hash = 'contato'}>contato</button>
             </div>
             <div className='redes'>
                 <button aria-label="LinkDin!" data-balloon-pos="down" onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>

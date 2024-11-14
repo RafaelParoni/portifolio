@@ -21,7 +21,7 @@
 .navbar {
     width: 100vw;
     height: 50px;
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

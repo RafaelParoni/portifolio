@@ -24,11 +24,11 @@ function About(){
     ProjetcsLen()
 
     function viewDocPDF(){
-        if(document.getElementById('about-curriculo').style.height === '1000px'){
-            document.getElementById("about-curriculo").style.height = '80px'
+        if(document.getElementById('curriculo').style.height === '1000px'){
+            document.getElementById("curriculo").style.height = '80px'
             document.getElementById('curriculo-seta').style.transform = 'rotateX(0deg)'
         }else{
-            document.getElementById("about-curriculo").style.height = '1000px'
+            document.getElementById("curriculo").style.height = '1000px'
             document.getElementById('curriculo-seta').style.transform = 'rotateX(180deg)'
         }
     }
@@ -70,7 +70,7 @@ function About(){
                 </p>
 
             </div>
-            <div id="about-curriculo" className="about-curriculo">
+            <div id="curriculo" className="about-curriculo">
                 <span onClick={(e)=> viewDocPDF()} style={{margin: 0, fontSize: '15px', padding: '0', textAlign: 'left', width: '105%'}}>Click para ver o curriculo!</span>
                 <button onClick={(e)=> viewDocPDF()}> 
                     <h2> <BsHandIndex /> Curriculo  </h2>
