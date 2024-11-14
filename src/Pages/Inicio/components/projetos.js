@@ -276,7 +276,6 @@ function Projetos(){
             }
 
             var t = 0
-            var languagens = <></>
 
             let tecBody = document.getElementById("tecnologiasBody")
             let topicDiv;
@@ -292,8 +291,22 @@ function Projetos(){
                 }
             }
 
+
+            let git = document.getElementById('linkGit')
+            if(item.github !== undefined){
+                git.setAttribute('href', `${item.github}`)
+            }else{
+                git.style.display = 'none'
+            }
+
+            let browser = document.getElementById('linkBrowser')
+            if(item.site !== undefined){
+                browser.setAttribute('href', `${item.site}`)
+            }else{
+                browser.style.display = 'none'
+            }
             
-            console.log(languagens)
+            
         },100)
         
 
@@ -336,7 +349,7 @@ function Projetos(){
     
 
     return (
-        <div className="projetosMain">
+        <div id="projetos" className="projetosMain">
             <h2 style={{textAlign: 'center'}}> <BsPuzzle /> Projetos</h2>
             <div className="projetos">
                 <div className="desq">
@@ -362,8 +375,8 @@ function Projetos(){
                                 
                                 <div className="infoProjeto">
                                     <div className="links">
-                                        <a href="dada" target="noreferrer"><BsGithub/></a>
-                                        <a href="dada" target="noreferrer"><BsBrowserChrome/></a>
+                                        <a id="linkGit" href="." target="noreferrer"><BsGithub/></a>
+                                        <a id='linkBrowser' href="." target="noreferrer"><BsBrowserChrome/></a>
                                     </div>
                                     <div id="tecnologiasBody"  className="tecnologias"></div>
                                     
