@@ -11,12 +11,12 @@ function About(){
     async function ProjetcsLen(){   
         const token = process.env.REACT_APP_GITHUB_TOKEN;
 
-        const results = await axios.get('https://api.github.com/users/RafaelParoni/repos', {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
         try{
+            const results = await axios.get('https://api.github.com/users/RafaelParoni/repos', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
             document.getElementById('QuantProjetos').innerHTML = results.data.length
         }catch(error ){
             console.error(error)
