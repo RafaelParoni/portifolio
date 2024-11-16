@@ -12,6 +12,7 @@
   // Import Contents
   import NavBar from './components/NavBar/Navbar.js';
   import { AutoModeDetection } from './functions/ThemeMode.js';
+  import ScrollBtn from './components/ButtonScroll/Scroll.js';
 
   setTimeout(function(){
     ThemeAutoSelection() // Chama a função para definir o tema do site -- Dark | Light
@@ -28,6 +29,7 @@
       <Routes>
         <Route path="/" element={<Inicio />} />
       </Routes>
+    <ScrollBtn/>
     </BrowserRouter> 
   );
 
