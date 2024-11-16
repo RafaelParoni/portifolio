@@ -214,7 +214,7 @@
     width: min(850px, 90vw);
     padding: 25px;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
     background-color: var(--mainBackground);
     transition: 2s;
     border-radius: 5px;
@@ -464,4 +464,3 @@
     color:var(--spanColor);
 
 }
-
