@@ -7,7 +7,7 @@
   import './index.css'; // import Css page
 
   // Import Pages/Componentes
-  import Inicio from './Pages/Inicio/inicio.js';
+  import Inicio from './Inicio/inicio.js';
 
   // Import Contents
   import NavBar from './components/NavBar/Navbar.js';
