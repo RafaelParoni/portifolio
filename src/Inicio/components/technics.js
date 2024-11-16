@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
-import errorImg from './../../../icons/error_5171.png'
+import errorImg from './../../icons/error_5171.png'
 import { BsCpu } from "react-icons/bs";
 
 function Technics(){

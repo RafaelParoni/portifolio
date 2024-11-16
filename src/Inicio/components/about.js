@@ -1,8 +1,9 @@
 import { BsEnvelopeFill, BsGithub, BsChevronCompactDown,BsHandIndex, BsAt, BsLinkedin, BsInfoCircle, BsFillShareFill, BsInstagram, BsWhatsapp, BsLink45Deg  } from "react-icons/bs";
-import Icon from './../../../icons/favicon.ico'
+import Icon from './../../icons/favicon.ico'
 import axios from "axios"; // get API RESULTS IN projetcsLen
 
-import curriculoUrl from './../../../curriculo.pdf'
+import curriculoUrl from './../../curriculo.pdf'
+
 
 function About(){
 
