@@ -91,7 +91,7 @@ function About(){
                     <h2> <BsHandIndex /> Curriculo  </h2>
                     <BsChevronCompactDown size={25} id="curriculo-seta"/>
                 </button>
-                <iframe src={curriculoUrl} width="800px" height="900px" style={{border: 'none'}}></iframe>
+                <iframe title="curriculo" src={curriculoUrl} width="800px" height="900px" style={{border: 'none'}}></iframe>
                 <embed  src={curriculoUrl} width="800px" height="900px" />
             </div>
         </>
