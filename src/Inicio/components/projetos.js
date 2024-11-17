@@ -354,11 +354,6 @@ function Projetos(){
             <div className="projetos">
                 <div className="desq">
                     <div className="tagDestaque"><span><BsStarFill/> Destaque</span></div>
-                    {Object.keys(ProjetoDestaque).length === 0 && (
-                        <div className="projetoDestaque">
-                                
-                        </div>
-                    )}
                     {Object.keys(ProjetoDestaque).length > 0 && (
                         <div id="projetoDestaque" className="projetoDestaque">
                                 <h1  className="titleProjeto">teste</h1>
@@ -400,9 +395,6 @@ function Projetos(){
                         <span className="last-updata"> Ultima atualização: {ProjetoDestaque.data} </span> 
                     </div>
                     {Projetos.map((Projetos, index) => <GenerateListResp item={Projetos} index={index} />)}
-                    {Object.keys(Projetos).length === 0 && (
-                        <> teste </>
-                    )}
                 </div>
             </div>
         </div>

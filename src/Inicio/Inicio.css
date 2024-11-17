@@ -23,12 +23,17 @@
     height: 200px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     grid-gap: 20px;
     padding-inline: 25px;
     background-color: var(--mainBackground);
     transition: 2s;
     margin: 65px 0 25px 0;
     border-radius: 5px;
+}
+
+.about-mobile { 
+    display: none;
 }
 
 .about img {
@@ -150,6 +155,9 @@
     cursor: pointer;
 }
 .about-curriculo embed {
+    margin: 10px 0 10px 0;
+}
+.about-curriculo iframe {
     margin: 10px 0 10px 0;
 }
 
@@ -309,8 +317,7 @@
 .projetos 
 .desq{
     height:auto;
-    width: calc(800px - 285px);
-
+    max-width: 550px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -321,9 +328,9 @@
 .projetoDestaque {
     background-color: var(--divBackground);
     height: auto;
-    width: 100%;
     border-radius: 5px;
     margin: 5px 0 0 0 ;
+    padding: 0 0 20px 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -442,7 +449,9 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 80%;
-        height: 100%;
+        margin-top: 5px;
+        padding: 5px;
+        grid-gap: 5px;
     }
     .tecnologias span {
         color: #000;
@@ -464,3 +473,76 @@
     color:var(--spanColor);
 
 }
+
+
+@media only screen and (max-width: 1300px) {
+    .projetosMain {
+        width: 80%;
+    }
+    .tec {
+        width: 80%;
+    }
+    .about {
+        width: 80%;
+        height: auto;
+        align-items: flex-start;
+        padding-top: 25px;
+    }
+    
+    .about-desc {
+        width: 80%;
+    }
+    .about-curriculo {
+        width: 80%;
+    }
+    .about-curriculo embed {
+
+        display: none;
+    }
+    .about-curriculo iframe {
+        width: 100%;
+    }
+
+
+
+    .projetos {
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 50px;
+    }
+    .desq {
+        width: 100%;
+    }
+    .tagDestaque {
+        width: auto;
+    }
+    .projetoDestaque {
+        width: 350px;
+
+    }
+    .dataUptada {
+        right: 15px;
+        top: 20px;
+    }
+    .about {
+        display: none;
+    }
+    .about-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-mobile div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .about-mobile .about-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+  }

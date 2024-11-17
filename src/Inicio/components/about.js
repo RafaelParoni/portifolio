@@ -50,6 +50,20 @@ function About(){
                     </div>
                 </div>
             </div>
+            <div className="about-mobile about">
+                <div>
+                    <img src={Icon} alt="FavIcon" />
+                    <h1>Rafael Paroni Silva</h1>
+                </div>
+                <div className="about-info">
+                        <button aria-label="Copiar link da pagina!" data-balloon-pos="down" onClick={()=> navigator.clipboard.writeText(window.location)}><BsFillShareFill/></button>
+                        <button aria-label="LinkeDin!" data-balloon-pos="down" onClick={()=> window.open('https://www.linkedin.com/in/rafael-paroni-43961a301')}><BsLinkedin/></button>
+                        <button aria-label="Instagram!" data-balloon-pos="down" onClick={()=> window.open('https://www.instagram.com/rafaelparroni/')}><BsInstagram/></button>
+                        <button aria-label="Github!" data-balloon-pos="down" onClick={()=> window.open('https://github.com/RafaelParoni')}><BsGithub/></button>
+                        <button aria-label="Mail!" data-balloon-pos="down" onClick={()=> window.open('mailto:rafaelparonisilvaa@gmail.com')}><BsEnvelopeFill/></button>
+                        <button aria-label="Whatsapp!" data-balloon-pos="down" onClick={()=> window.open('https://api.whatsapp.com/send?phone=12982087099')}><BsWhatsapp/></button>
+                </div>
+            </div>
             <div className="about-desc" id="sobre">
                 <h2><BsInfoCircle/> Sobre mim</h2>
                 <p> 
@@ -77,6 +91,7 @@ function About(){
                     <h2> <BsHandIndex /> Curriculo  </h2>
                     <BsChevronCompactDown size={25} id="curriculo-seta"/>
                 </button>
+                <iframe src={curriculoUrl} width="800px" height="900px" style={{border: 'none'}}></iframe>
                 <embed  src={curriculoUrl} width="800px" height="900px" />
             </div>
         </>

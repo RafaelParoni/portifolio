@@ -78,3 +78,15 @@
     transition: 0.5s;
     border-top: 2px solid var(--BorderButtonColor);
 }
+
+
+@media only screen and (max-width: 1300px) {
+    .menu button:nth-child(4),
+    .menu button:nth-child(5){
+        display: none;
+    }
+    .menu {
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+  }
