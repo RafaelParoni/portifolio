@@ -1,10 +1,12 @@
 .Light:root{
     --mainBackground: #919191;
+    --BtnScrollColor: #646464;
     --divBackground: #bbbbbb;
     --spanColor: #5f5f5f;
 }
 .Dark:root{
     --mainBackground: #2e2e2e;
+    --BtnScrollColor: #1b1b1b;
     --divBackground : #171717;
     --spanColor: #aaaaaa;
 }
