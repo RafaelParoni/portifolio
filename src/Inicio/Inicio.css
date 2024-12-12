@@ -156,9 +156,7 @@
     color: var(--textColor);
     cursor: pointer;
 }
-.about-curriculo embed {
-    margin: 10px 0 10px 0;
-}
+
 .about-curriculo iframe {
     margin: 10px 0 10px 0;
 }

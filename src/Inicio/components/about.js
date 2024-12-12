@@ -92,7 +92,6 @@ function About(){
                     <BsChevronCompactDown size={25} id="curriculo-seta"/>
                 </button>
                 <iframe title="curriculo" src={curriculoUrl} width="800px" height="900px" style={{border: 'none'}}></iframe>
-                <embed  src={curriculoUrl} width="800px" height="900px" />
             </div>
         </>
     )
