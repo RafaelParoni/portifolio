@@ -475,7 +475,7 @@
 }
 
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1000px) {
     .projetosMain {
         width: 80%;
     }
