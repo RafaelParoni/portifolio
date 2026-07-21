@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "about": {
+      "pt": "Sobre",
+      "en": "About",
+      "es": "Sobre mí"
+    },
+    "works": {
+      "pt": "Trabalhos",
+      "en": "Works",
+      "es": "Trabajos"
+    },
+    "contact": {
+      "pt": "Contato",
+      "en": "Contact",
+      "es": "Contacto"
+    }
+  },
+  "hero": {
+    "greeting": {
+      "pt": "Olá, Eu sou o",
+      "en": "Hi, I am",
+      "es": "Hola, soy"
+    },
+    "rolePrefix": {
+      "pt": "Desenvolvedor",
+      "en": "Developer",
+      "es": "Desarrollador"
+    },
+    "roles": {
+      "pt": [
+        "Front-end",
+        "Back-end",
+        "Discord's Bot"
+      ],
+      "en": [
+        "Front-end",
+        "Back-end",
+        "Discord's Bot"
+      ],
+      "es": [
+        "Front-end",
+        "Back-end",
+        "Discord's Bot"
+      ]
+    },
+    "description": {
+      "pt": "Transformo ideias em interfaces modernas, focadas em performance, design premium e na melhor experiência do usuário.",
+      "en": "I transform ideas into modern interfaces, focusing on performance, premium design, and the best user experience.",
+      "es": "Transformo ideas en interfaces modernas, centradas en el rendimiento, diseño premium y la mejor experiencia de usuario."
+    },
+    "resumeBtn": {
+      "pt": "Ver currículo",
+      "en": "View Resume",
+      "es": "Ver currículum"
+    },
+    "worksBtn": {
+      "pt": "Trabalhos",
+      "en": "Works",
+      "es": "Trabajos"
+    },
+    "githubProjects": {
+      "pt": "projetos",
+      "en": "projects",
+      "es": "proyectos"
+    },
+    "creatorOf": {
+      "pt": "E criador do ",
+      "en": "And creator of ",
+      "es": "Y creador de "
+    }
+  },
+  "works": {
+    "titlePrefix": {
+      "pt": "Meus",
+      "en": "My",
+      "es": "Mis"
+    },
+    "titleHighlight": {
+      "pt": "Trabalhos",
+      "en": "Works",
+      "es": "Trabajos"
+    },
+    "badgeHighlight": {
+      "pt": "Destaque",
+      "en": "Featured",
+      "es": "Destacado"
+    },
+    "siteBtn": {
+      "pt": "Site oficial",
+      "en": "Official Website",
+      "es": "Sitio oficial"
+    },
+    "repoBtn": {
+      "pt": "Repositório",
+      "en": "Repository",
+      "es": "Repositorio"
+    },
+    "seeAllProjects": {
+      "pt": "Veja todos os meus projetos no meu github",
+      "en": "See all my projects on my github",
+      "es": "Mira todos mis proyectos en mi github"
+    }
+  },
+  "contact": {
+    "title": {
+      "pt": "Contato",
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "underConstruction": {
+      "pt": "Seção em construção...",
+      "en": "Section under construction...",
+      "es": "Sección en construcción..."
+    }
+  }
+}

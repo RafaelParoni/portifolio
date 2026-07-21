@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "nome": "Letrassauro",
+    "descricao": {
+      "pt": "Um jogo premium, responsivo e moderno inspirado nos clássicos Wordle e Termo, com temática paleontológica e científica.",
+      "en": "A premium, responsive, and modern game inspired by the classics Wordle and Termo, featuring a paleontological and scientific theme.",
+      "es": "Un juego premium, responsivo y moderno inspirado en los clásicos Wordle y Termo, con temática paleontológica y científica."
+    },
+    "prioridade": 98,
+    "destaque": true,
+    "icon": "Code",
+    "link": "https://letrassauro.vercel.app/",
+    "github": "https://github.com/RafaelParoni/LetrassauroAPI",
+    "tags": [
+      "Node.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Fumaça Bot",
+    "descricao": {
+      "pt": "Um Discord bot feito para a Stremer 'MarsVolanss' onde o foco principal dele é notificar os membros de seu discord sobre a live ter iniciado.",
+      "en": "A Discord bot built for the streamer 'MarsVolanss,' designed primarily to notify her Discord community whenever she goes live!",
+      "es": "Un bot de Discord creado para la streamer «MarsVolanss», cuyo objetivo principal es notificar a los miembros de su servidor de Discord cuando empieza su directo."
+    },
+    "prioridade": 8,
+    "destaque": false,
+    "icon": "Bot",
+    "link": "",
+    "github": "",
+    "tags": [
+      "Discord.js",
+      "Node.js"
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Paroni Downloader",
+    "descricao": {
+      "pt": "Um software para Windows, feito em PYthon, para fazer download de Vídeos/audios do Youtube, tiktok e instagram, e de musicas do spotify",
+      "en": "A Windows PC software, built with Python, designed to download videos and audio from YouTube, TikTok, and Instagram, as well as songs from Spotify.",
+      "es": "Un software para PC con Windows, desarrollado con Python, diseñado para descargar vídeos y audios de YouTube, TikTok e Instagram, así como canciones de Spotify."
+    },
+    "prioridade": 99,
+    "destaque": true,
+    "icon": "Code",
+    "link": "https://paroni-downloader.vercel.app/",
+    "github": "https://github.com/RafaelParoni/Paroni-Downloader",
+    "tags": [
+      "Python",
+      "Html"
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "ParoniDeck",
+    "descricao": {
+      "pt": "Um Stream Deck web moderno para controlar o Soundpad e ajustar volumes de apps individuais (Spotify, Chrome) diretamente do celular.",
+      "en": "A modern web-based Stream Deck to control Soundpad and adjust individual app volumes (Spotify, Chrome) directly from your phone.",
+      "es": "Un Stream Deck web moderno para controlar Soundpad y ajustar el volumen de aplicaciones individuales (Spotify, Chrome) directamente desde el móvil."
+    },
+    "prioridade": 5,
+    "destaque": false,
+    "icon": "Back-end/Front-end",
+    "link": "",
+    "github": "https://github.com/RafaelParoni/ParoniDeck",
+    "tags": [
+      "Javascript",
+      "Html"
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Paroni FastClip",
+    "descricao": {
+      "pt": "FastClip Paroni é uma aplicação web moderna e extremamente rápida para clipping de vídeos longos.",
+      "en": "FastClip Paroni is a modern, lightning-fast web app for clipping long-form videos.",
+      "es": "FastClip Paroni es una aplicación web moderna y extremadamente rápida para cortar vídeos largos."
+    },
+    "prioridade": 5,
+    "destaque": false,
+    "icon": "Front-end",
+    "link": "https://fast-clip.vercel.app/",
+    "github": "https://github.com/RafaelParoni/FastClipParoni",
+    "tags": [
+      "React.js",
+      "FFmpeg.wasm",
+      "JSZip"
+    ]
+  }
+]
