@@ -89,5 +89,23 @@
       "FFmpeg.wasm",
       "JSZip"
     ]
+  },
+  {
+    "id": 6,
+    "nome": "QR Custom",
+    "descricao": {
+      "pt": "Um Criador de QR Code FREE de forma customizada.",
+      "en": "A FREE QR Code Creator in a customized way.",
+      "es": "Un creador de QR Code GRATIS de forma personalizada."
+    },
+    "prioridade": 5,
+    "destaque": false,
+    "icon": "Front-end",
+    "link": "https://qr-custom.vercel.app/",
+    "github": "https://github.com/RafaelParoni/QrCustom",
+    "tags": [
+      "React.js",
+      "qrcode.react"
+    ]
   }
 ]

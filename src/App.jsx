@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Trabalhos from './components/Trabalhos';
 import ModalCurriculo from './components/ModalCurriculo';
+import QRCodeImg from './assets/QRCODE.png';
 
 function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -70,7 +71,7 @@ function App() {
             <div className="contact-card" style={{ flexDirection: 'row', gap: '2rem', padding: '1.5rem 2rem', alignItems: 'center', maxWidth: '500px', cursor: 'default' }}>
               <div style={{ background: '#fff', padding: '10px', borderRadius: '12px' }}>
                 <img 
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/${whatsappNumber}`} 
+                  src={QRCodeImg} 
                   alt="WhatsApp QR Code" 
                   style={{ display: 'block', width: '120px', height: '120px' }}
                 />
