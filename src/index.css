@@ -67,7 +67,12 @@ body {
   transition: all 0.3s ease;
 }
 
+
+
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -75,30 +80,33 @@ body {
 
 .nav-link {
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-color);
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--primary-gradient);
-  transition: width 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.1);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  background-color: rgba(128, 128, 128, 0.2);
+  border-color: var(--border-color);
+  transform: translateY(-2px);
 }
 
-.nav-link:hover::after {
-  width: 100%;
+.nav-menu {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.mobile-brand {
+  display: none;
 }
 
 .nav-controls {
@@ -698,5 +706,162 @@ section {
   .contact-subtitle {
     font-size: 1rem;
     margin-bottom: 3rem !important;
+  }
+
+  /* Navbar Mobile - 3 Lines */
+  .hamburger {
+    display: none;
+  }
+  
+  .navbar {
+    top: auto;
+    bottom: 0;
+    height: auto;
+    padding: 0.75rem 5%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: none;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-brand {
+    display: none; /* Hide the desktop brand */
+  }
+  
+  .mobile-brand {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    position: relative;
+    left: auto;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links .nav-link {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+
+  .nav-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Hero Mobile */
+  .hero {
+    padding-top: 80px; /* Make room for top brand bar */
+    padding-bottom: 80px; /* Make room for bottom bar */
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-wrapper {
+    margin-top: 1rem;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+  
+  /* Sections Mobile */
+  body {
+    padding-bottom: 100px; /* Space for the bottom navbar */
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  section {
+    padding: 60px 5% 20px;
+  }
+
+  /* Trabalhos Mobile */
+  .trabalho-card {
+    flex: 0 0 85vw;
+    padding: 1.5rem;
+  }
+  
+  .scroll-btn {
+    display: none; /* Hide scroll buttons on mobile */
+  }
+  
+  .trabalhos-grid {
+    padding-left: 2%; /* small adjustment */
+    padding-bottom: 15px; /* space for scrollbar */
+  }
+
+  .trabalhos-grid::-webkit-scrollbar {
+    height: 6px; /* Always show scrollbar on mobile */
+  }
+
+  /* Contact Mobile Adjustments */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller cards */
+    gap: 1rem;
+  }
+  
+  .contact-card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .contact-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+
+  /* Contact Mobile (QR Code card) */
+  .contact-card[style*="flex-direction: row"] {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    width: 90% !important; /* Make QR code card 90% width */
+    margin: 0 auto;
+  }
+  
+  .contact-card[style*="flex-direction: row"] > div:last-child {
+    text-align: center !important;
   }
 }

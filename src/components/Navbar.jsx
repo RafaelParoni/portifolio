@@ -25,43 +25,51 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="navbar">
-      <div className="nav-controls">
-        <select 
-          className="lang-select" 
-          value={lang} 
-          onChange={(e) => setLang(e.target.value)}
-        >
-          <option value="pt">PT</option>
-          <option value="en">EN</option>
-          <option value="es">ES</option>
-        </select>
-        
-        <button onClick={toggleTheme} className="icon-button" aria-label="Toggle Theme">
-          {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-        </button>
-      </div>
-
-      <div className="nav-links">
-        {navLinks.map((link) => (
-          <Link
-            key={link.to}
-            to={link.to}
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="nav-link"
-          >
-            {link.name}
-          </Link>
-        ))}
-      </div>
-
-      <div className="nav-brand">
+    <>
+      <div className="mobile-brand">
         <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, letterSpacing: '-0.5px' }}>
           Rafael Paroni
         </h2>
       </div>
-    </nav>
+
+      <nav className="navbar">
+        <div className="nav-brand">
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, letterSpacing: '-0.5px' }}>
+            Rafael Paroni
+          </h2>
+        </div>
+
+        <div className="nav-links">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="nav-link"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="nav-controls">
+          <select 
+            className="lang-select" 
+            value={lang} 
+            onChange={(e) => setLang(e.target.value)}
+          >
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+          
+          <button onClick={toggleTheme} className="icon-button" aria-label="Toggle Theme">
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+        </div>
+      </nav>
+    </>
   );
 }
