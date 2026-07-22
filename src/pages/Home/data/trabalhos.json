@@ -98,11 +98,10 @@
       "en": "A FREE QR Code Creator in a customized way.",
       "es": "Un creador de QR Code GRATIS de forma personalizada."
     },
-    "prioridade": 5,
+    "prioridade": 97,
     "destaque": false,
     "icon": "Front-end",
-    "link": "https://qr-custom.vercel.app/",
-    "github": "https://github.com/RafaelParoni/QrCustom",
+    "link": "/qr-custom",
     "tags": [
       "React.js",
       "qrcode.react"
