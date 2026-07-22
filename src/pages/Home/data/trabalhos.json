@@ -46,7 +46,7 @@
     "prioridade": 99,
     "destaque": true,
     "icon": "Code",
-    "link": "https://paroni-downloader.vercel.app/",
+    "link": "/downloader",
     "github": "https://github.com/RafaelParoni/Paroni-Downloader",
     "tags": [
       "Python",

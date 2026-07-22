@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import Trabalhos from './components/Trabalhos';
 import ModalCurriculo from './components/ModalCurriculo';
 import QRCodeImg from './assets/QRCODE.png';
+import { LanguageProvider } from './contexts/LanguageContext';
+import './Home.css';
 
 function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -17,7 +19,7 @@ function App() {
   const whatsappDisplay = whatsappNumber.replace(/^55/, '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <main>
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
@@ -91,7 +93,7 @@ function App() {
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}
       />
-    </>
+    </LanguageProvider>
   );
 }
 

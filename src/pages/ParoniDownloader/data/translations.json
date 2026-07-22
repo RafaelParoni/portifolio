@@ -1,0 +1,121 @@
+{
+  "navbar": {
+    "features": {
+      "pt": "Recursos",
+      "en": "Features",
+      "es": "Recursos"
+    },
+    "download": {
+      "pt": "Download",
+      "en": "Download",
+      "es": "Descargar"
+    },
+    "updates": {
+      "pt": "Atualizações",
+      "en": "Updates",
+      "es": "Actualizaciones"
+    },
+    "opensource": {
+      "pt": "Código aberto",
+      "en": "Open Source",
+      "es": "Código abierto"
+    }
+  },
+  "hero": {
+    "presenting": {
+      "pt": "Apresentando o",
+      "en": "Presenting",
+      "es": "Presentando"
+    },
+    "subtitle": {
+      "pt": "Sua ferramenta para",
+      "en": "Your tool for",
+      "es": "Tu herramienta para"
+    },
+    "typewriter": {
+      "pt": "downloads rápidos",
+      "en": "fast downloads",
+      "es": "descargas rápidas"
+    },
+    "description": {
+      "pt": "Baixe vídeos, áudios e imagens das suas redes sociais favoritas de forma rápida, segura e totalmente gratuita. Uma interface limpa, sem anúncios e focada na melhor experiência.",
+      "en": "Download videos, audio, and images from your favorite social networks quickly, safely, and completely free. A clean, ad-free interface focused on the best experience.",
+      "es": "Descarga videos, audios e imágenes de tus redes sociales favoritas de forma rápida, segura y totalmente gratuita. Una interfaz limpia, sin anuncios y enfocada en la mejor experiencia."
+    },
+    "downloadApp": {
+      "pt": "Download App",
+      "en": "Download App",
+      "es": "Descargar App"
+    },
+    "sourceCode": {
+      "pt": "Código Fonte",
+      "en": "Source Code",
+      "es": "Código Fuente"
+    }
+  },
+  "features": {
+    "title1": {
+      "pt": "Plataformas",
+      "en": "Supported",
+      "es": "Plataformas"
+    },
+    "title2": {
+      "pt": "Suportadas",
+      "en": "Platforms",
+      "es": "Soportadas"
+    },
+    "subtitle": {
+      "pt": "Mantenha todas as suas mídias favoritas offline, prontas para assistir ou ouvir em qualquer lugar. Suporte completo para dezenas de sites.",
+      "en": "Keep all your favorite media offline, ready to watch or listen anywhere. Full support for dozens of sites.",
+      "es": "Mantén todos tus medios favoritos offline, listos para ver o escuchar en cualquier lugar. Soporte completo para decenas de sitios."
+    },
+    "youtube": {
+      "title": { "pt": "YouTube", "en": "YouTube", "es": "YouTube" },
+      "desc": {
+        "pt": "Baixe vídeos na resolução original de até 4K/8K, ou extraia apenas o áudio na melhor qualidade possível. Suporte para playlists completas.",
+        "en": "Download videos in original resolution up to 4K/8K, or extract just the audio in the best possible quality. Full playlist support.",
+        "es": "Descarga videos en resolución original de hasta 4K/8K, o extrae solo el audio en la mejor calidad posible. Soporte completo para listas de reproducción."
+      }
+    },
+    "spotify": {
+      "title": { "pt": "Spotify", "en": "Spotify", "es": "Spotify" },
+      "desc": {
+        "pt": "Digitalize suas faixas e playlists preferidas diretamente do Spotify com qualidade de estúdio e todas as tags e capas de álbuns organizadas.",
+        "en": "Digitize your favorite tracks and playlists directly from Spotify with studio quality and all tags and album covers organized.",
+        "es": "Digitaliza tus pistas y listas de reproducción favoritas directamente desde Spotify con calidad de estudio y todas las etiquetas y portadas de álbumes organizadas."
+      }
+    },
+    "tiktok": {
+      "title": { "pt": "TikTok", "en": "TikTok", "es": "TikTok" },
+      "desc": {
+        "pt": "Salve os vídeos mais engraçados e virais do TikTok diretamente no seu computador, sem marca d'água e perfeitamente sincronizados.",
+        "en": "Save the funniest and most viral TikTok videos directly to your computer, watermark-free and perfectly synchronized.",
+        "es": "Guarda los videos de TikTok más divertidos y virales directamente en tu computadora, sin marca de agua y perfectamente sincronizados."
+      }
+    },
+    "instagram": {
+      "title": { "pt": "Instagram", "en": "Instagram", "es": "Instagram" },
+      "desc": {
+        "pt": "Baixe vídeos em HD do feed, Reels e Stories impressionantes com apenas um clique. Interface limpa, simples e que vai te surpreender.",
+        "en": "Download HD videos from feed, Reels, and stunning Stories with just one click. Clean, simple interface that will surprise you.",
+        "es": "Descarga videos en HD del feed, Reels e impresionantes Stories con solo un clic. Interfaz limpia y sencilla que te sorprenderá."
+      }
+    },
+    "twitch": {
+      "title": { "pt": "Twitch", "en": "Twitch", "es": "Twitch" },
+      "desc": {
+        "pt": "Baixe VODs inteiros, Clipes engraçados e transmissões passadas na qualidade original para não perder nenhum conteúdo de seus streamers favoritos.",
+        "en": "Download entire VODs, funny clips, and past broadcasts in original quality so you don't miss any content from your favorite streamers.",
+        "es": "Descarga VOD enteros, clips divertidos y transmisiones pasadas en calidad original para no perderte ningún contenido de tus streamers favoritos."
+      }
+    },
+    "others": {
+      "title": { "pt": "Outras Plataformas", "en": "Other Platforms", "es": "Otras Plataformas" },
+      "desc": {
+        "pt": "Também suportamos dezenas de outros sites como X (Twitter), Facebook, Pinterest, Vimeo, SoundCloud, Bandcamp, Bilibili, Reddit, Kwai e muito mais.",
+        "en": "We also support dozens of other sites like X (Twitter), Facebook, Pinterest, Vimeo, SoundCloud, Bandcamp, Bilibili, Reddit, Kwai and much more.",
+        "es": "También admitimos decenas de otros sitios como X (Twitter), Facebook, Pinterest, Vimeo, SoundCloud, Bandcamp, Bilibili, Reddit, Kwai y muchos más."
+      }
+    }
+  }
+}

@@ -64,7 +64,6 @@ export default function Hero({ onOpenResume }) {
 
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '';
   const githubLink = import.meta.env.VITE_GITHUB_LINK || '#';
-  const paroniSystemLink = import.meta.env.VITE_PARONI_SYSTEM_LINK || '#';
 
   const formatWhatsappLink = () => {
     return `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}`;
@@ -83,16 +82,6 @@ export default function Hero({ onOpenResume }) {
           
           <p className="description">
             {t('hero.description')}
-            <br />
-            {t('hero.creatorOf') || 'E criador do '}
-            <a 
-              href={paroniSystemLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="paroni-link text-gradient"
-            >
-              Paroni System <ExternalLink size={16} />
-            </a>.
           </p>
           
           <div className="btn-group" style={{ marginBottom: '1rem' }}>
