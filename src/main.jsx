@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './pages/Home'
 import ParoniDownloader from './pages/ParoniDownloader'
+import QrCustom from './pages/QrCustom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -10,6 +11,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/downloader" element={<ParoniDownloader />} />
+        <Route path="/qr-custom" element={<QrCustom />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
