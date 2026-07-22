@@ -91,10 +91,10 @@ function QrCustom() {
     <div className="app-container">
       <nav className="navbar">
         <div className="navbar-left" style={{ display: 'flex', gap: '1rem' }}>
-          <a href={import.meta.env.VITE_INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Instagram">
+          <a href={import.meta.env.VITE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Instagram">
             <FaInstagram size={24} />
           </a>
-          <a href={import.meta.env.VITE_GITHUB_URL} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Github">
+          <a href={import.meta.env.VITE_GITHUB_LINK} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Github">
             <FaGithub size={24} />
           </a>
         </div>
