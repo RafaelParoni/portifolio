@@ -102,6 +102,7 @@
     "destaque": false,
     "icon": "Front-end",
     "link": "/qr-custom",
+    "github": "https://github.com/RafaelParoni/portifolio/tree/main/src/pages/QrCustom",
     "tags": [
       "React.js",
       "qrcode.react"
