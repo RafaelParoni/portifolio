@@ -14,5 +14,5 @@ createRoot(document.getElementById('root')).render(
         <Route path="/qr-custom" element={<QrCustom />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
